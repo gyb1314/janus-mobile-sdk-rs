@@ -25,21 +25,16 @@ let package = Package(
     name: "JanusGateway",
     platforms: [.iOS(.v13), .macOS(.v11)],
     products: [
-        .library(
-            name: "JanusGateway",
-            targets: ["JanusGateway"]
-        ),
-        .library(
-            name: "JanusGatewayPlugins",
-            targets: ["JanusGatewayPlugins"]
-        ),
+        .library(name: "JanusGateway", targets: ["JanusGateway"]),
+        .library(name: "JanusGatewayPlugins", targets: ["JanusGatewayPlugins"]),
     ],
     targets: [
         binaryTarget,
         .target(
             name: "JanusGateway",
             dependencies: [.target(name: "UniFFI")],
-            path: "apple/Sources/JanusGateway"
+            path: "apple/Sources/JanusGateway",
+            resources: [.process("apple/Resources/PrivacyInfo.xcprivacy")]
         ),
         .target(
             name: "JanusGatewayPlugins",
@@ -47,7 +42,8 @@ let package = Package(
                 .target(name: "UniFFI"),
                 .target(name: "JanusGateway")
             ],
-            path: "apple/Sources/Plugins"
+            path: "apple/Sources/Plugins",
+            resources: [.process("apple/Resources/PrivacyInfo.xcprivacy")]
         ),
         .target(
             name: "UniFFI",

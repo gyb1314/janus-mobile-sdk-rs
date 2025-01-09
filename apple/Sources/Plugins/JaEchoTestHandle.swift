@@ -82,6 +82,7 @@ public final class JaEchoTestHandle {
 public enum JaEchoTestEvent {
     case result(echotest: String, result: String)
     case resultWithJsep(echotest: String, result: String, jsep: Jsep)
+    case error(errorCode: UInt16, error: String)
 }
 
 extension JaEchoTestHandle: EchotestHandleCallback {
@@ -95,5 +96,9 @@ extension JaEchoTestHandle: EchotestHandleCallback {
         continuation?.yield(
             .resultWithJsep(echotest: echotest, result: result, jsep: jsep)
         )
+    }
+
+    public func onEchoTestError(errorCode: UInt16, error: String) {
+        continuation?.yield(.error(errorCode: errorCode, error: error))
     }
 }
