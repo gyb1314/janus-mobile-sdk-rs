@@ -23,7 +23,7 @@ let binaryTarget: Target = if useLocalFramework {
 
 let package = Package(
     name: "JanusGateway",
-    platforms: [.iOS(.v13), .macOS(.v11)],
+    platforms: [.iOS(.v13)],
     products: [
         .library(name: "JanusGateway", targets: ["JanusGateway"]),
         .library(name: "JanusGatewayPlugins", targets: ["JanusGatewayPlugins"]),
