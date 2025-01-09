@@ -4,7 +4,7 @@
 import PackageDescription
 
 // Never push to remote with this flag set to true
-let useLocalFramework = true
+let useLocalFramework = false
 let releaseTag = "0.1.0"
 let releaseChecksum = "512ec41bc933fd7da15161676bfb65963b986a5778f4e1f91a4f5908a04a174d"
 
@@ -16,7 +16,7 @@ let binaryTarget: Target = if useLocalFramework {
 } else {
     .binaryTarget(
         name: "JanusGatewayFFI",
-        url: "https://github.com/Proximie/jarust-ios-package/releases/download/\(releaseTag)/libjanus_gateway-rs.xcframework.zip",
+        url: "https://github.com/Ghamza-Jd/janus-mobile-sdk/releases/download/\(releaseTag)/libjanus_gateway-rs.xcframework.zip",
         checksum: releaseChecksum
     )
 }
