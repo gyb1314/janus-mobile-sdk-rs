@@ -11,7 +11,7 @@ import UniFFI
 public struct JaConfig {
     let url: String
     let capacity: UInt16
-    let namespace: String?
+    let serverRoot: String?
     let apisecret: String?
 
     var lower: Config {
@@ -19,24 +19,24 @@ public struct JaConfig {
             url: url,
             capacity: capacity,
             apisecret: apisecret,
-            namespace: namespace
+            serverRoot: serverRoot
         )
     }
 
     /// - Parameters:
     ///     - url: The URL to reach this server API
     ///     - capacity: Buffer capacity
-    ///     - namespace: The connection namespace, default ot "janus"
+    ///     - serverRoot: The connection server root, default ot "janus"
     ///     - apisecrent: The API secret for this server
     public init(
         url: String,
         capacity: UInt16,
-        namespace: String? = nil,
+        serverRoot: String? = nil,
         apisecret: String? = nil
     ) {
         self.url = url
         self.capacity = capacity
-        self.namespace = namespace
+        self.serverRoot = serverRoot
         self.apisecret = apisecret
     }
 }
