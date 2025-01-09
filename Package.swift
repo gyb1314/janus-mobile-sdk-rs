@@ -34,7 +34,9 @@ let package = Package(
             name: "JanusGateway",
             dependencies: [.target(name: "UniFFI")],
             path: "apple/Sources/JanusGateway",
-            resources: [.process("apple/Resources/PrivacyInfo.xcprivacy")]
+            resources: [
+                .process("Resources/PrivacyInfo.xcprivacy")
+            ]
         ),
         .target(
             name: "JanusGatewayPlugins",
@@ -43,7 +45,9 @@ let package = Package(
                 .target(name: "JanusGateway")
             ],
             path: "apple/Sources/Plugins",
-            resources: [.process("apple/Resources/PrivacyInfo.xcprivacy")]
+            resources: [
+                .process("Resources/PrivacyInfo.xcprivacy")
+            ]
         ),
         .target(
             name: "UniFFI",
