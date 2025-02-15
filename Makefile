@@ -73,14 +73,11 @@ apple_gh_release:
 		sed -i "" -E "s/(let useLocalFramework = )true/\1false/g" ./Package.swift; \
 		shortcommit=$$(git rev-parse --short HEAD); \
 		version=$$(cargo metadata --format-version 1 | jq -r '.packages[] | select(.name=="rslib") .version'); \
-		git checkout -b release/$$version-$$shortcommit; \
 		git add ./Package.swift; \
 		git add ./rslib/Cargo.toml; \
 		git commit -m "Update Package.swift for $$version release"; \
 		git tag -a $$version -m "$$version"; \
-		git push origin HEAD; \
-		git push origin refs/tags/$$version; \
-		gh pr create --title "Release $$version" --body "Release $$version" --label release; \
+		git push origin HEAD --tags; \
 		echo "Creating draft GitHub release"; \
 		gh release create $$version target/ios/lib$(LIBNAME)-rs.xcframework.zip --title "$$version" --generate-notes --draft; \
 	fi
