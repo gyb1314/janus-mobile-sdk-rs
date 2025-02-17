@@ -75,6 +75,7 @@ apple_gh_release:
 		version=$$(cargo metadata --format-version 1 | jq -r '.packages[] | select(.name=="rslib") .version'); \
 		git add ./Package.swift; \
 		git add ./rslib/Cargo.toml; \
+		git add ./Cargo.lock; \
 		git commit -m "Update Package.swift for $$version release"; \
 		git tag -a $$version -m "$$version"; \
 		git push origin HEAD --tags; \
