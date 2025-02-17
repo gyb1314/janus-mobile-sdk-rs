@@ -10,8 +10,10 @@ extension JanusSession {
         return JanusEchoTestHandle(handle: handle)
     }
 
-    public func attachAudioBridge(timeout: TimeInterval) async throws -> JanusAudioBridgeHandle {
+    public func attachAudioBridge(
+        delegate: JanusAudioBridgeDelegate? = nil, timeout: TimeInterval
+    ) async throws -> JanusAudioBridgeHandle {
         let handle = try await lower.attachAudioBridge(timeout: timeout)
-        return JanusAudioBridgeHandle(handle: handle)
+        return JanusAudioBridgeHandle(handle: handle, delegate: delegate)
     }
 }
