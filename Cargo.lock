@@ -1307,7 +1307,7 @@ dependencies = [
 
 [[package]]
 name = "rslib"
-version = "0.7.3"
+version = "0.7.4"
 dependencies = [
  "android_logger",
  "jarust",
