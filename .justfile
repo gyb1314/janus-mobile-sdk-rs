@@ -75,6 +75,7 @@ apple-gh-release release="":
 		git tag -a {{VERSION}} -m "{{VERSION}}"; \
 		git push origin HEAD --tags; \
 		echo "Creating draft GitHub release"; \
+		gh release create {{VERSION}} target/ios/lib{{LIBNAME}}-rs.xcframework.zip --title "{{VERSION}}" --generate-notes --draft; \
 	fi
 
 # Clean up the build artifacts
