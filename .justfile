@@ -56,10 +56,10 @@ apple-build-xcframework release="":
 		-output target/ios/lib{{LIBNAME}}-rs.xcframework
 	@if [ "{{release}}" = "-r" ]; then \
 		echo "Building xcframework archive"; \
-		checksum=`swift package compute-checksum target/ios/lib{{LIBNAME}}-rs.xcframework.zip` \
 		zip -r target/ios/lib{{LIBNAME}}-rs.xcframework.zip target/ios/lib{{LIBNAME}}-rs.xcframework; \
+		checksum=`swift package compute-checksum target/ios/lib{{LIBNAME}}-rs.xcframework.zip`; \
 		sed -i "" -E "s/(let releaseTag = \")[^\"]+(\")/\1{{VERSION}}\2/g" ./Package.swift; \
-		sed -i "" -E "s/(let releaseChecksum = \")[^\"]+(\")/\1$$checksum\2/g" ./Package.swift; \
+		sed -i "" -E "s/(let releaseChecksum = \")[^\"]+(\")/\1$checksum\2/g" ./Package.swift; \
 	fi
 
 # Create a github release. Only works when '-r' is passed.
