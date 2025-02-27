@@ -663,6 +663,36 @@ internal open class UniffiForeignFutureStructVoid(
 internal interface UniffiForeignFutureCompleteVoid : com.sun.jna.Callback {
     fun callback(`callbackData`: Long,`result`: UniffiForeignFutureStructVoid.UniffiByValue,)
 }
+internal interface UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod0 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`transaction`: RustBuffer.ByValue,`result`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
+internal interface UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod1 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`transaction`: RustBuffer.ByValue,`result`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
+internal interface UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod2 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`id`: RustBuffer.ByValue,`room`: RustBuffer.ByValue,`participants`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
+internal interface UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod3 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`id`: RustBuffer.ByValue,`room`: RustBuffer.ByValue,`participants`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
+internal interface UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod4 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`room`: RustBuffer.ByValue,`participants`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
+internal interface UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod5 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`room`: RustBuffer.ByValue,`participants`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
+internal interface UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod6 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`room`: RustBuffer.ByValue,`participantId`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
+internal interface UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod7 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`event`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
+internal interface UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod8 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`errorCode`: Short,`error`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
+internal interface UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod9 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`data`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
 internal interface UniffiCallbackInterfaceEchotestHandleCallbackMethod0 : com.sun.jna.Callback {
     fun callback(`uniffiHandle`: Long,`echotest`: RustBuffer.ByValue,`result`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
 }
@@ -672,43 +702,104 @@ internal interface UniffiCallbackInterfaceEchotestHandleCallbackMethod1 : com.su
 internal interface UniffiCallbackInterfaceEchotestHandleCallbackMethod2 : com.sun.jna.Callback {
     fun callback(`uniffiHandle`: Long,`errorCode`: Short,`error`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
 }
+internal interface UniffiCallbackInterfaceEchotestHandleCallbackMethod3 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`event`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
+internal interface UniffiCallbackInterfaceEchotestHandleCallbackMethod4 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`data`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
 internal interface UniffiCallbackInterfaceHandleCallbackMethod0 : com.sun.jna.Callback {
     fun callback(`uniffiHandle`: Long,`event`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
 }
-@Structure.FieldOrder("onResult", "onResultWithJsep", "onEchoTestError", "uniffiFree")
+internal interface UniffiCallbackInterfaceHandleCallbackMethod1 : com.sun.jna.Callback {
+    fun callback(`uniffiHandle`: Long,`event`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+}
+@Structure.FieldOrder("onResult", "onResultWithJsep", "onRoomJoinedWithJsep", "onRoomJoined", "onParticipantsJoined", "onParticipantsUpdated", "onParticipantLeft", "onHandleEvent", "onAudioBridgeError", "onOther", "uniffiFree")
+internal open class UniffiVTableCallbackInterfaceAudioBridgeHandleCallback(
+    @JvmField internal var `onResult`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod0? = null,
+    @JvmField internal var `onResultWithJsep`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod1? = null,
+    @JvmField internal var `onRoomJoinedWithJsep`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod2? = null,
+    @JvmField internal var `onRoomJoined`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod3? = null,
+    @JvmField internal var `onParticipantsJoined`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod4? = null,
+    @JvmField internal var `onParticipantsUpdated`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod5? = null,
+    @JvmField internal var `onParticipantLeft`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod6? = null,
+    @JvmField internal var `onHandleEvent`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod7? = null,
+    @JvmField internal var `onAudioBridgeError`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod8? = null,
+    @JvmField internal var `onOther`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod9? = null,
+    @JvmField internal var `uniffiFree`: UniffiCallbackInterfaceFree? = null,
+) : Structure() {
+    class UniffiByValue(
+        `onResult`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod0? = null,
+        `onResultWithJsep`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod1? = null,
+        `onRoomJoinedWithJsep`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod2? = null,
+        `onRoomJoined`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod3? = null,
+        `onParticipantsJoined`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod4? = null,
+        `onParticipantsUpdated`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod5? = null,
+        `onParticipantLeft`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod6? = null,
+        `onHandleEvent`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod7? = null,
+        `onAudioBridgeError`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod8? = null,
+        `onOther`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod9? = null,
+        `uniffiFree`: UniffiCallbackInterfaceFree? = null,
+    ): UniffiVTableCallbackInterfaceAudioBridgeHandleCallback(`onResult`,`onResultWithJsep`,`onRoomJoinedWithJsep`,`onRoomJoined`,`onParticipantsJoined`,`onParticipantsUpdated`,`onParticipantLeft`,`onHandleEvent`,`onAudioBridgeError`,`onOther`,`uniffiFree`,), Structure.ByValue
+
+   internal fun uniffiSetValue(other: UniffiVTableCallbackInterfaceAudioBridgeHandleCallback) {
+        `onResult` = other.`onResult`
+        `onResultWithJsep` = other.`onResultWithJsep`
+        `onRoomJoinedWithJsep` = other.`onRoomJoinedWithJsep`
+        `onRoomJoined` = other.`onRoomJoined`
+        `onParticipantsJoined` = other.`onParticipantsJoined`
+        `onParticipantsUpdated` = other.`onParticipantsUpdated`
+        `onParticipantLeft` = other.`onParticipantLeft`
+        `onHandleEvent` = other.`onHandleEvent`
+        `onAudioBridgeError` = other.`onAudioBridgeError`
+        `onOther` = other.`onOther`
+        `uniffiFree` = other.`uniffiFree`
+    }
+
+}
+@Structure.FieldOrder("onResult", "onResultWithJsep", "onEchoTestError", "onHandleEvent", "onOther", "uniffiFree")
 internal open class UniffiVTableCallbackInterfaceEchotestHandleCallback(
     @JvmField internal var `onResult`: UniffiCallbackInterfaceEchotestHandleCallbackMethod0? = null,
     @JvmField internal var `onResultWithJsep`: UniffiCallbackInterfaceEchotestHandleCallbackMethod1? = null,
     @JvmField internal var `onEchoTestError`: UniffiCallbackInterfaceEchotestHandleCallbackMethod2? = null,
+    @JvmField internal var `onHandleEvent`: UniffiCallbackInterfaceEchotestHandleCallbackMethod3? = null,
+    @JvmField internal var `onOther`: UniffiCallbackInterfaceEchotestHandleCallbackMethod4? = null,
     @JvmField internal var `uniffiFree`: UniffiCallbackInterfaceFree? = null,
 ) : Structure() {
     class UniffiByValue(
         `onResult`: UniffiCallbackInterfaceEchotestHandleCallbackMethod0? = null,
         `onResultWithJsep`: UniffiCallbackInterfaceEchotestHandleCallbackMethod1? = null,
         `onEchoTestError`: UniffiCallbackInterfaceEchotestHandleCallbackMethod2? = null,
+        `onHandleEvent`: UniffiCallbackInterfaceEchotestHandleCallbackMethod3? = null,
+        `onOther`: UniffiCallbackInterfaceEchotestHandleCallbackMethod4? = null,
         `uniffiFree`: UniffiCallbackInterfaceFree? = null,
-    ): UniffiVTableCallbackInterfaceEchotestHandleCallback(`onResult`,`onResultWithJsep`,`onEchoTestError`,`uniffiFree`,), Structure.ByValue
+    ): UniffiVTableCallbackInterfaceEchotestHandleCallback(`onResult`,`onResultWithJsep`,`onEchoTestError`,`onHandleEvent`,`onOther`,`uniffiFree`,), Structure.ByValue
 
    internal fun uniffiSetValue(other: UniffiVTableCallbackInterfaceEchotestHandleCallback) {
         `onResult` = other.`onResult`
         `onResultWithJsep` = other.`onResultWithJsep`
         `onEchoTestError` = other.`onEchoTestError`
+        `onHandleEvent` = other.`onHandleEvent`
+        `onOther` = other.`onOther`
         `uniffiFree` = other.`uniffiFree`
     }
 
 }
-@Structure.FieldOrder("onEvent", "uniffiFree")
+@Structure.FieldOrder("onPluginEvent", "onHandleEvent", "uniffiFree")
 internal open class UniffiVTableCallbackInterfaceHandleCallback(
-    @JvmField internal var `onEvent`: UniffiCallbackInterfaceHandleCallbackMethod0? = null,
+    @JvmField internal var `onPluginEvent`: UniffiCallbackInterfaceHandleCallbackMethod0? = null,
+    @JvmField internal var `onHandleEvent`: UniffiCallbackInterfaceHandleCallbackMethod1? = null,
     @JvmField internal var `uniffiFree`: UniffiCallbackInterfaceFree? = null,
 ) : Structure() {
     class UniffiByValue(
-        `onEvent`: UniffiCallbackInterfaceHandleCallbackMethod0? = null,
+        `onPluginEvent`: UniffiCallbackInterfaceHandleCallbackMethod0? = null,
+        `onHandleEvent`: UniffiCallbackInterfaceHandleCallbackMethod1? = null,
         `uniffiFree`: UniffiCallbackInterfaceFree? = null,
-    ): UniffiVTableCallbackInterfaceHandleCallback(`onEvent`,`uniffiFree`,), Structure.ByValue
+    ): UniffiVTableCallbackInterfaceHandleCallback(`onPluginEvent`,`onHandleEvent`,`uniffiFree`,), Structure.ByValue
 
    internal fun uniffiSetValue(other: UniffiVTableCallbackInterfaceHandleCallback) {
-        `onEvent` = other.`onEvent`
+        `onPluginEvent` = other.`onPluginEvent`
+        `onHandleEvent` = other.`onHandleEvent`
         `uniffiFree` = other.`uniffiFree`
     }
 
@@ -811,19 +902,276 @@ internal open class UniffiVTableCallbackInterfaceHandleCallback(
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// For large crates we prevent `MethodTooLargeException` (see #2340)
+// N.B. the name of the extension is very misleading, since it is 
+// rather `InterfaceTooLargeException`, caused by too many methods 
+// in the interface for large crates.
+//
+// By splitting the otherwise huge interface into two parts
+// * UniffiLib 
+// * IntegrityCheckingUniffiLib (this)
+// we allow for ~2x as many methods in the UniffiLib interface.
+// 
+// The `ffi_uniffi_contract_version` method and all checksum methods are put 
+// into `IntegrityCheckingUniffiLib` and these methods are called only once,
+// when the library is loaded.
+internal interface IntegrityCheckingUniffiLib : Library {
+    // Integrity check functions only
+    fun uniffi_janus_gateway_checksum_func_init_janus_logger(
+): Short
+fun uniffi_janus_gateway_checksum_func_janus_connect(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_complete_trickle(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_configure(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_create_room(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_detach(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_exist(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_fire_and_forget(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_fire_and_forget_with_jsep(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_hangup(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_join_room(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_list_participants(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_mute(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_send_waiton_ack(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_send_waiton_result(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_start_event_loop(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_trickle_candidates(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_trickle_single_candidate(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandle_unmute(
+): Short
+fun uniffi_janus_gateway_checksum_method_connection_create_session(
+): Short
+fun uniffi_janus_gateway_checksum_method_connection_server_info(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_complete_trickle(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_detach(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_fire_and_forget(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_fire_and_forget_with_jsep(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_hangup(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_send_waiton_ack(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_send_waiton_result(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_start(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_start_event_loop(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_start_with_jsep(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_trickle_candidates(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandle_trickle_single_candidate(
+): Short
+fun uniffi_janus_gateway_checksum_method_handle_complete_trickle(
+): Short
+fun uniffi_janus_gateway_checksum_method_handle_detach(
+): Short
+fun uniffi_janus_gateway_checksum_method_handle_fire_and_forget(
+): Short
+fun uniffi_janus_gateway_checksum_method_handle_fire_and_forget_with_jsep(
+): Short
+fun uniffi_janus_gateway_checksum_method_handle_hangup(
+): Short
+fun uniffi_janus_gateway_checksum_method_handle_send_waiton_ack(
+): Short
+fun uniffi_janus_gateway_checksum_method_handle_send_waiton_result(
+): Short
+fun uniffi_janus_gateway_checksum_method_handle_start_event_loop(
+): Short
+fun uniffi_janus_gateway_checksum_method_handle_trickle_candidates(
+): Short
+fun uniffi_janus_gateway_checksum_method_handle_trickle_single_candidate(
+): Short
+fun uniffi_janus_gateway_checksum_method_session_attach(
+): Short
+fun uniffi_janus_gateway_checksum_method_session_attach_audio_bridge(
+): Short
+fun uniffi_janus_gateway_checksum_method_session_attach_echo_test(
+): Short
+fun uniffi_janus_gateway_checksum_method_session_destory(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_result(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_result_with_jsep(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_room_joined_with_jsep(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_room_joined(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_participants_joined(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_participants_updated(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_participant_left(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_handle_event(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_audio_bridge_error(
+): Short
+fun uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_other(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_result(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_result_with_jsep(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_echo_test_error(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_handle_event(
+): Short
+fun uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_other(
+): Short
+fun uniffi_janus_gateway_checksum_method_handlecallback_on_plugin_event(
+): Short
+fun uniffi_janus_gateway_checksum_method_handlecallback_on_handle_event(
+): Short
+fun ffi_janus_gateway_uniffi_contract_version(
+): Int
+
+}
+
 // A JNA Library to expose the extern-C FFI definitions.
 // This is an implementation detail which will be called internally by the public API.
-
 internal interface UniffiLib : Library {
     companion object {
         internal val INSTANCE: UniffiLib by lazy {
-            loadIndirect<UniffiLib>(componentName = "janus_gateway")
-            .also { lib: UniffiLib ->
-                uniffiCheckContractApiVersion(lib)
-                uniffiCheckApiChecksums(lib)
-                uniffiCallbackInterfaceEchotestHandleCallback.register(lib)
-                uniffiCallbackInterfaceHandleCallback.register(lib)
+            val componentName = "janus_gateway"
+            // For large crates we prevent `MethodTooLargeException` (see #2340)
+            // N.B. the name of the extension is very misleading, since it is 
+            // rather `InterfaceTooLargeException`, caused by too many methods 
+            // in the interface for large crates.
+            //
+            // By splitting the otherwise huge interface into two parts
+            // * UniffiLib (this)
+            // * IntegrityCheckingUniffiLib
+            // And all checksum methods are put into `IntegrityCheckingUniffiLib`
+            // we allow for ~2x as many methods in the UniffiLib interface.
+            // 
+            // Thus we first load the library with `loadIndirect` as `IntegrityCheckingUniffiLib`
+            // so that we can (optionally!) call `uniffiCheckApiChecksums`...
+            loadIndirect<IntegrityCheckingUniffiLib>(componentName)
+                .also { lib: IntegrityCheckingUniffiLib ->
+                    uniffiCheckContractApiVersion(lib)
+                    uniffiCheckApiChecksums(lib)
                 }
+            // ... and then we load the library as `UniffiLib`
+            // N.B. we cannot use `loadIndirect` once and then try to cast it to `UniffiLib`
+            // => results in `java.lang.ClassCastException: com.sun.proxy.$Proxy cannot be cast to ...`
+            // error. So we must call `loadIndirect` twice. For crates large enough
+            // to trigger this issue, the performance impact is negligible, running on
+            // a macOS M1 machine the `loadIndirect` call takes ~50ms.
+            val lib = loadIndirect<UniffiLib>(componentName)
+            // No need to check the contract version and checksums, since 
+            // we already did that with `IntegrityCheckingUniffiLib` above.
+            uniffiCallbackInterfaceAudioBridgeHandleCallback.register(lib)
+            uniffiCallbackInterfaceEchotestHandleCallback.register(lib)
+            uniffiCallbackInterfaceHandleCallback.register(lib)
+            // Loading of library with integrity check done.
+            lib
         }
         
         // The Cleaner for the whole library
@@ -832,237 +1180,365 @@ internal interface UniffiLib : Library {
         }
     }
 
-    fun uniffi_janus_gateway_fn_clone_connection(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
-    ): Pointer
-    fun uniffi_janus_gateway_fn_free_connection(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
-    ): Unit
-    fun uniffi_janus_gateway_fn_method_connection_create_session(`ptr`: Pointer,`kaInterval`: Int,`timeout`: RustBuffer.ByValue,
-    ): Long
-    fun uniffi_janus_gateway_fn_clone_echotesthandle(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
-    ): Pointer
-    fun uniffi_janus_gateway_fn_free_echotesthandle(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
-    ): Unit
-    fun uniffi_janus_gateway_fn_method_echotesthandle_start(`ptr`: Pointer,`audio`: RustBuffer.ByValue,`video`: RustBuffer.ByValue,`bitrate`: RustBuffer.ByValue,
-    ): Long
-    fun uniffi_janus_gateway_fn_method_echotesthandle_start_event_loop(`ptr`: Pointer,`cb`: Long,
-    ): Long
-    fun uniffi_janus_gateway_fn_method_echotesthandle_start_with_jsep(`ptr`: Pointer,`audio`: RustBuffer.ByValue,`video`: RustBuffer.ByValue,`bitrate`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
-    ): Long
-    fun uniffi_janus_gateway_fn_clone_handle(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
-    ): Pointer
-    fun uniffi_janus_gateway_fn_free_handle(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
-    ): Unit
-    fun uniffi_janus_gateway_fn_method_handle_fire_and_forget(`ptr`: Pointer,`data`: RustBuffer.ByValue,
-    ): Long
-    fun uniffi_janus_gateway_fn_method_handle_fire_and_forget_with_jsep(`ptr`: Pointer,`data`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,
-    ): Long
-    fun uniffi_janus_gateway_fn_method_handle_send_waiton_ack(`ptr`: Pointer,`data`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
-    ): Long
-    fun uniffi_janus_gateway_fn_method_handle_send_waiton_result(`ptr`: Pointer,`data`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
-    ): Long
-    fun uniffi_janus_gateway_fn_method_handle_start_event_loop(`ptr`: Pointer,`cb`: Long,
-    ): Long
-    fun uniffi_janus_gateway_fn_clone_session(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
-    ): Pointer
-    fun uniffi_janus_gateway_fn_free_session(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
-    ): Unit
-    fun uniffi_janus_gateway_fn_method_session_attach(`ptr`: Pointer,`pluginId`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
-    ): Long
-    fun uniffi_janus_gateway_fn_method_session_attach_echo_test(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
-    ): Long
-    fun uniffi_janus_gateway_fn_init_callback_vtable_echotesthandlecallback(`vtable`: UniffiVTableCallbackInterfaceEchotestHandleCallback,
-    ): Unit
-    fun uniffi_janus_gateway_fn_init_callback_vtable_handlecallback(`vtable`: UniffiVTableCallbackInterfaceHandleCallback,
-    ): Unit
-    fun uniffi_janus_gateway_fn_func_raw_init_logger(uniffi_out_err: UniffiRustCallStatus, 
-    ): Unit
-    fun uniffi_janus_gateway_fn_func_raw_janus_connect(`config`: RustBuffer.ByValue,
-    ): Long
-    fun ffi_janus_gateway_rustbuffer_alloc(`size`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): RustBuffer.ByValue
-    fun ffi_janus_gateway_rustbuffer_from_bytes(`bytes`: ForeignBytes.ByValue,uniffi_out_err: UniffiRustCallStatus, 
-    ): RustBuffer.ByValue
-    fun ffi_janus_gateway_rustbuffer_free(`buf`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
-    ): Unit
-    fun ffi_janus_gateway_rustbuffer_reserve(`buf`: RustBuffer.ByValue,`additional`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): RustBuffer.ByValue
-    fun ffi_janus_gateway_rust_future_poll_u8(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_u8(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_u8(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_u8(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Byte
-    fun ffi_janus_gateway_rust_future_poll_i8(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_i8(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_i8(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_i8(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Byte
-    fun ffi_janus_gateway_rust_future_poll_u16(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_u16(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_u16(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_u16(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Short
-    fun ffi_janus_gateway_rust_future_poll_i16(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_i16(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_i16(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_i16(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Short
-    fun ffi_janus_gateway_rust_future_poll_u32(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_u32(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_u32(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_u32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Int
-    fun ffi_janus_gateway_rust_future_poll_i32(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_i32(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_i32(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_i32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Int
-    fun ffi_janus_gateway_rust_future_poll_u64(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_u64(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_u64(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_u64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Long
-    fun ffi_janus_gateway_rust_future_poll_i64(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_i64(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_i64(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_i64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Long
-    fun ffi_janus_gateway_rust_future_poll_f32(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_f32(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_f32(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_f32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Float
-    fun ffi_janus_gateway_rust_future_poll_f64(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_f64(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_f64(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_f64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Double
-    fun ffi_janus_gateway_rust_future_poll_pointer(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_pointer(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_pointer(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_pointer(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Pointer
-    fun ffi_janus_gateway_rust_future_poll_rust_buffer(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_rust_buffer(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_rust_buffer(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_rust_buffer(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): RustBuffer.ByValue
-    fun ffi_janus_gateway_rust_future_poll_void(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_cancel_void(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_free_void(`handle`: Long,
-    ): Unit
-    fun ffi_janus_gateway_rust_future_complete_void(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
-    ): Unit
-    fun uniffi_janus_gateway_checksum_func_raw_init_logger(
-    ): Short
-    fun uniffi_janus_gateway_checksum_func_raw_janus_connect(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_connection_create_session(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_echotesthandle_start(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_echotesthandle_start_event_loop(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_echotesthandle_start_with_jsep(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_handle_fire_and_forget(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_handle_fire_and_forget_with_jsep(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_handle_send_waiton_ack(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_handle_send_waiton_result(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_handle_start_event_loop(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_session_attach(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_session_attach_echo_test(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_result(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_result_with_jsep(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_echo_test_error(
-    ): Short
-    fun uniffi_janus_gateway_checksum_method_handlecallback_on_event(
-    ): Short
-    fun ffi_janus_gateway_uniffi_contract_version(
-    ): Int
-    
+    // FFI functions
+    fun uniffi_janus_gateway_fn_clone_audiobridgehandle(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+): Pointer
+fun uniffi_janus_gateway_fn_free_audiobridgehandle(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+): Unit
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_complete_trickle(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_configure(`ptr`: Pointer,`params`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_create_room(`ptr`: Pointer,`params`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_detach(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_exist(`ptr`: Pointer,`roomId`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_fire_and_forget(`ptr`: Pointer,`data`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_fire_and_forget_with_jsep(`ptr`: Pointer,`data`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_hangup(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_join_room(`ptr`: Pointer,`params`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_list_participants(`ptr`: Pointer,`roomId`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_mute(`ptr`: Pointer,`params`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_send_waiton_ack(`ptr`: Pointer,`data`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_send_waiton_result(`ptr`: Pointer,`data`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_start_event_loop(`ptr`: Pointer,`cb`: Long,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_trickle_candidates(`ptr`: Pointer,`candidates`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_trickle_single_candidate(`ptr`: Pointer,`candidate`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_audiobridgehandle_unmute(`ptr`: Pointer,`params`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_clone_connection(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+): Pointer
+fun uniffi_janus_gateway_fn_free_connection(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+): Unit
+fun uniffi_janus_gateway_fn_method_connection_create_session(`ptr`: Pointer,`keepAliveIntervalInSecs`: Int,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_connection_server_info(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_clone_echotesthandle(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+): Pointer
+fun uniffi_janus_gateway_fn_free_echotesthandle(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+): Unit
+fun uniffi_janus_gateway_fn_method_echotesthandle_complete_trickle(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_echotesthandle_detach(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_echotesthandle_fire_and_forget(`ptr`: Pointer,`data`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_echotesthandle_fire_and_forget_with_jsep(`ptr`: Pointer,`data`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_echotesthandle_hangup(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_echotesthandle_send_waiton_ack(`ptr`: Pointer,`data`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_echotesthandle_send_waiton_result(`ptr`: Pointer,`data`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_echotesthandle_start(`ptr`: Pointer,`params`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_echotesthandle_start_event_loop(`ptr`: Pointer,`cb`: Long,
+): Long
+fun uniffi_janus_gateway_fn_method_echotesthandle_start_with_jsep(`ptr`: Pointer,`params`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_echotesthandle_trickle_candidates(`ptr`: Pointer,`candidates`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_echotesthandle_trickle_single_candidate(`ptr`: Pointer,`candidate`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_clone_handle(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+): Pointer
+fun uniffi_janus_gateway_fn_free_handle(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+): Unit
+fun uniffi_janus_gateway_fn_method_handle_complete_trickle(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_handle_detach(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_handle_fire_and_forget(`ptr`: Pointer,`data`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_handle_fire_and_forget_with_jsep(`ptr`: Pointer,`data`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_handle_hangup(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_handle_send_waiton_ack(`ptr`: Pointer,`data`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_handle_send_waiton_result(`ptr`: Pointer,`data`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_handle_start_event_loop(`ptr`: Pointer,`cb`: Long,
+): Long
+fun uniffi_janus_gateway_fn_method_handle_trickle_candidates(`ptr`: Pointer,`candidates`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_handle_trickle_single_candidate(`ptr`: Pointer,`candidate`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_clone_session(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+): Pointer
+fun uniffi_janus_gateway_fn_free_session(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+): Unit
+fun uniffi_janus_gateway_fn_method_session_attach(`ptr`: Pointer,`pluginId`: RustBuffer.ByValue,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_session_attach_audio_bridge(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_session_attach_echo_test(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_method_session_destory(`ptr`: Pointer,`timeout`: RustBuffer.ByValue,
+): Long
+fun uniffi_janus_gateway_fn_init_callback_vtable_audiobridgehandlecallback(`vtable`: UniffiVTableCallbackInterfaceAudioBridgeHandleCallback,
+): Unit
+fun uniffi_janus_gateway_fn_init_callback_vtable_echotesthandlecallback(`vtable`: UniffiVTableCallbackInterfaceEchotestHandleCallback,
+): Unit
+fun uniffi_janus_gateway_fn_init_callback_vtable_handlecallback(`vtable`: UniffiVTableCallbackInterfaceHandleCallback,
+): Unit
+fun uniffi_janus_gateway_fn_func_init_janus_logger(`subsystem`: RustBuffer.ByValue,`category`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
+): Unit
+fun uniffi_janus_gateway_fn_func_janus_connect(`config`: RustBuffer.ByValue,
+): Long
+fun ffi_janus_gateway_rustbuffer_alloc(`size`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): RustBuffer.ByValue
+fun ffi_janus_gateway_rustbuffer_from_bytes(`bytes`: ForeignBytes.ByValue,uniffi_out_err: UniffiRustCallStatus, 
+): RustBuffer.ByValue
+fun ffi_janus_gateway_rustbuffer_free(`buf`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
+): Unit
+fun ffi_janus_gateway_rustbuffer_reserve(`buf`: RustBuffer.ByValue,`additional`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): RustBuffer.ByValue
+fun ffi_janus_gateway_rust_future_poll_u8(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_u8(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_u8(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_u8(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Byte
+fun ffi_janus_gateway_rust_future_poll_i8(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_i8(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_i8(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_i8(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Byte
+fun ffi_janus_gateway_rust_future_poll_u16(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_u16(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_u16(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_u16(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Short
+fun ffi_janus_gateway_rust_future_poll_i16(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_i16(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_i16(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_i16(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Short
+fun ffi_janus_gateway_rust_future_poll_u32(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_u32(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_u32(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_u32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Int
+fun ffi_janus_gateway_rust_future_poll_i32(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_i32(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_i32(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_i32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Int
+fun ffi_janus_gateway_rust_future_poll_u64(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_u64(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_u64(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_u64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Long
+fun ffi_janus_gateway_rust_future_poll_i64(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_i64(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_i64(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_i64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Long
+fun ffi_janus_gateway_rust_future_poll_f32(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_f32(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_f32(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_f32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Float
+fun ffi_janus_gateway_rust_future_poll_f64(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_f64(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_f64(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_f64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Double
+fun ffi_janus_gateway_rust_future_poll_pointer(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_pointer(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_pointer(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_pointer(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Pointer
+fun ffi_janus_gateway_rust_future_poll_rust_buffer(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_rust_buffer(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_rust_buffer(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_rust_buffer(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): RustBuffer.ByValue
+fun ffi_janus_gateway_rust_future_poll_void(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_cancel_void(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_free_void(`handle`: Long,
+): Unit
+fun ffi_janus_gateway_rust_future_complete_void(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
+): Unit
+
 }
 
-private fun uniffiCheckContractApiVersion(lib: UniffiLib) {
+private fun uniffiCheckContractApiVersion(lib: IntegrityCheckingUniffiLib) {
     // Get the bindings contract version from our ComponentInterface
-    val bindings_contract_version = 26
+    val bindings_contract_version = 29
     // Get the scaffolding contract version by calling the into the dylib
     val scaffolding_contract_version = lib.ffi_janus_gateway_uniffi_contract_version()
     if (bindings_contract_version != scaffolding_contract_version) {
         throw RuntimeException("UniFFI contract version mismatch: try cleaning and rebuilding your project")
     }
 }
-
 @Suppress("UNUSED_PARAMETER")
-private fun uniffiCheckApiChecksums(lib: UniffiLib) {
-    if (lib.uniffi_janus_gateway_checksum_func_raw_init_logger() != 47317.toShort()) {
+private fun uniffiCheckApiChecksums(lib: IntegrityCheckingUniffiLib) {
+    if (lib.uniffi_janus_gateway_checksum_func_init_janus_logger() != 56827.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
-    if (lib.uniffi_janus_gateway_checksum_func_raw_janus_connect() != 39620.toShort()) {
+    if (lib.uniffi_janus_gateway_checksum_func_janus_connect() != 27438.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
-    if (lib.uniffi_janus_gateway_checksum_method_connection_create_session() != 39238.toShort()) {
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_complete_trickle() != 64327.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
-    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_start() != 45525.toShort()) {
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_configure() != 39928.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_create_room() != 56852.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_detach() != 50253.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_exist() != 55415.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_fire_and_forget() != 33585.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_fire_and_forget_with_jsep() != 6039.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_hangup() != 1409.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_join_room() != 62884.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_list_participants() != 7752.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_mute() != 55698.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_send_waiton_ack() != 44496.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_send_waiton_result() != 47125.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_start_event_loop() != 16772.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_trickle_candidates() != 5622.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_trickle_single_candidate() != 56691.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandle_unmute() != 10529.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_connection_create_session() != 38721.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_connection_server_info() != 18308.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_complete_trickle() != 25982.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_detach() != 23878.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_fire_and_forget() != 6820.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_fire_and_forget_with_jsep() != 31372.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_hangup() != 29523.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_send_waiton_ack() != 51386.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_send_waiton_result() != 15964.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_start() != 6138.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_start_event_loop() != 42772.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
-    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_start_with_jsep() != 18887.toShort()) {
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_start_with_jsep() != 58592.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_trickle_candidates() != 101.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandle_trickle_single_candidate() != 3746.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_handle_complete_trickle() != 24960.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_handle_detach() != 1157.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_janus_gateway_checksum_method_handle_fire_and_forget() != 43989.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_janus_gateway_checksum_method_handle_fire_and_forget_with_jsep() != 28005.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_handle_hangup() != 23669.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_janus_gateway_checksum_method_handle_send_waiton_ack() != 1198.toShort()) {
@@ -1074,10 +1550,52 @@ private fun uniffiCheckApiChecksums(lib: UniffiLib) {
     if (lib.uniffi_janus_gateway_checksum_method_handle_start_event_loop() != 781.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
+    if (lib.uniffi_janus_gateway_checksum_method_handle_trickle_candidates() != 17041.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_handle_trickle_single_candidate() != 48289.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
     if (lib.uniffi_janus_gateway_checksum_method_session_attach() != 16557.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
+    if (lib.uniffi_janus_gateway_checksum_method_session_attach_audio_bridge() != 17158.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
     if (lib.uniffi_janus_gateway_checksum_method_session_attach_echo_test() != 28942.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_session_destory() != 62073.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_result() != 50231.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_result_with_jsep() != 23251.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_room_joined_with_jsep() != 60229.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_room_joined() != 39663.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_participants_joined() != 41973.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_participants_updated() != 13991.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_participant_left() != 5069.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_handle_event() != 6243.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_audio_bridge_error() != 45190.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_audiobridgehandlecallback_on_other() != 2276.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_result() != 12927.toShort()) {
@@ -1089,9 +1607,25 @@ private fun uniffiCheckApiChecksums(lib: UniffiLib) {
     if (lib.uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_echo_test_error() != 12056.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
-    if (lib.uniffi_janus_gateway_checksum_method_handlecallback_on_event() != 65130.toShort()) {
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_handle_event() != 49029.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
+    if (lib.uniffi_janus_gateway_checksum_method_echotesthandlecallback_on_other() != 50197.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_handlecallback_on_plugin_event() != 21699.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_janus_gateway_checksum_method_handlecallback_on_handle_event() != 1626.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+}
+
+/**
+ * @suppress
+ */
+public fun uniffiEnsureInitialized() {
+    UniffiLib.INSTANCE
 }
 
 // Async support
@@ -1182,6 +1716,29 @@ object NoPointer
 /**
  * @suppress
  */
+public object FfiConverterUByte: FfiConverter<UByte, Byte> {
+    override fun lift(value: Byte): UByte {
+        return value.toUByte()
+    }
+
+    override fun read(buf: ByteBuffer): UByte {
+        return lift(buf.get())
+    }
+
+    override fun lower(value: UByte): Byte {
+        return value.toByte()
+    }
+
+    override fun allocationSize(value: UByte) = 1UL
+
+    override fun write(value: UByte, buf: ByteBuffer) {
+        buf.put(value.toByte())
+    }
+}
+
+/**
+ * @suppress
+ */
 public object FfiConverterUShort: FfiConverter<UShort, Short> {
     override fun lift(value: Short): UShort {
         return value.toUShort()
@@ -1222,6 +1779,52 @@ public object FfiConverterUInt: FfiConverter<UInt, Int> {
 
     override fun write(value: UInt, buf: ByteBuffer) {
         buf.putInt(value.toInt())
+    }
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterInt: FfiConverter<Int, Int> {
+    override fun lift(value: Int): Int {
+        return value
+    }
+
+    override fun read(buf: ByteBuffer): Int {
+        return buf.getInt()
+    }
+
+    override fun lower(value: Int): Int {
+        return value
+    }
+
+    override fun allocationSize(value: Int) = 4UL
+
+    override fun write(value: Int, buf: ByteBuffer) {
+        buf.putInt(value)
+    }
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterULong: FfiConverter<ULong, Long> {
+    override fun lift(value: Long): ULong {
+        return value.toULong()
+    }
+
+    override fun read(buf: ByteBuffer): ULong {
+        return lift(buf.getLong())
+    }
+
+    override fun lower(value: ULong): Long {
+        return value.toLong()
+    }
+
+    override fun allocationSize(value: ULong) = 8UL
+
+    override fun write(value: ULong, buf: ByteBuffer) {
+        buf.putLong(value.toLong())
     }
 }
 
@@ -1498,6 +2101,7 @@ private class UniffiJnaCleanable(
     override fun clean() = cleanable.clean()
 }
 
+
 // We decide at uniffi binding generation time whether we were
 // using Android or not.
 // There are further runtime checks to chose the correct implementation
@@ -1527,14 +2131,638 @@ private class AndroidSystemCleanable(
 ) : UniffiCleaner.Cleanable {
     override fun clean() = cleanable.clean()
 }
-public interface ConnectionInterface {
+public interface AudioBridgeHandleInterface {
     
-    suspend fun `createSession`(`kaInterval`: kotlin.UInt, `timeout`: java.time.Duration): Session
+    suspend fun `completeTrickle`(`timeout`: java.time.Duration)
+    
+    suspend fun `configure`(`params`: AudioBridgeConfigureParams, `jsep`: Jsep?, `timeout`: java.time.Duration): kotlin.String
+    
+    suspend fun `createRoom`(`params`: AudioBridgeCreateParams, `timeout`: java.time.Duration): AudioBridgeRoomCreatedRsp
+    
+    suspend fun `detach`(`timeout`: java.time.Duration)
+    
+    suspend fun `exist`(`roomId`: JanusId, `timeout`: java.time.Duration): kotlin.Boolean
+    
+    suspend fun `fireAndForget`(`data`: kotlin.ByteArray)
+    
+    suspend fun `fireAndForgetWithJsep`(`data`: kotlin.ByteArray, `jsep`: Jsep)
+    
+    suspend fun `hangup`(`timeout`: java.time.Duration)
+    
+    suspend fun `joinRoom`(`params`: AudioBridgeJoinParams, `jsep`: Jsep?, `timeout`: java.time.Duration): kotlin.String
+    
+    suspend fun `listParticipants`(`roomId`: JanusId, `timeout`: java.time.Duration): AudioBridgeListParticipantsRsp
+    
+    suspend fun `mute`(`params`: AudioBridgeMuteParams): kotlin.String
+    
+    suspend fun `sendWaitonAck`(`data`: kotlin.ByteArray, `timeout`: java.time.Duration)
+    
+    suspend fun `sendWaitonResult`(`data`: kotlin.ByteArray, `timeout`: java.time.Duration): kotlin.ByteArray
+    
+    suspend fun `startEventLoop`(`cb`: AudioBridgeHandleCallback)
+    
+    suspend fun `trickleCandidates`(`candidates`: List<Candidate>, `timeout`: java.time.Duration)
+    
+    suspend fun `trickleSingleCandidate`(`candidate`: Candidate, `timeout`: java.time.Duration)
+    
+    suspend fun `unmute`(`params`: AudioBridgeMuteParams): kotlin.String
     
     companion object
 }
 
-open class Connection: Disposable, AutoCloseable, ConnectionInterface {
+open class AudioBridgeHandle: Disposable, AutoCloseable, AudioBridgeHandleInterface
+{
+
+    constructor(pointer: Pointer) {
+        this.pointer = pointer
+        this.cleanable = UniffiLib.CLEANER.register(this, UniffiCleanAction(pointer))
+    }
+
+    /**
+     * This constructor can be used to instantiate a fake object. Only used for tests. Any
+     * attempt to actually use an object constructed this way will fail as there is no
+     * connected Rust object.
+     */
+    @Suppress("UNUSED_PARAMETER")
+    constructor(noPointer: NoPointer) {
+        this.pointer = null
+        this.cleanable = UniffiLib.CLEANER.register(this, UniffiCleanAction(pointer))
+    }
+
+    protected val pointer: Pointer?
+    protected val cleanable: UniffiCleaner.Cleanable
+
+    private val wasDestroyed = AtomicBoolean(false)
+    private val callCounter = AtomicLong(1)
+
+    override fun destroy() {
+        // Only allow a single call to this method.
+        // TODO: maybe we should log a warning if called more than once?
+        if (this.wasDestroyed.compareAndSet(false, true)) {
+            // This decrement always matches the initial count of 1 given at creation time.
+            if (this.callCounter.decrementAndGet() == 0L) {
+                cleanable.clean()
+            }
+        }
+    }
+
+    @Synchronized
+    override fun close() {
+        this.destroy()
+    }
+
+    internal inline fun <R> callWithPointer(block: (ptr: Pointer) -> R): R {
+        // Check and increment the call counter, to keep the object alive.
+        // This needs a compare-and-set retry loop in case of concurrent updates.
+        do {
+            val c = this.callCounter.get()
+            if (c == 0L) {
+                throw IllegalStateException("${this.javaClass.simpleName} object has already been destroyed")
+            }
+            if (c == Long.MAX_VALUE) {
+                throw IllegalStateException("${this.javaClass.simpleName} call counter would overflow")
+            }
+        } while (! this.callCounter.compareAndSet(c, c + 1L))
+        // Now we can safely do the method call without the pointer being freed concurrently.
+        try {
+            return block(this.uniffiClonePointer())
+        } finally {
+            // This decrement always matches the increment we performed above.
+            if (this.callCounter.decrementAndGet() == 0L) {
+                cleanable.clean()
+            }
+        }
+    }
+
+    // Use a static inner class instead of a closure so as not to accidentally
+    // capture `this` as part of the cleanable's action.
+    private class UniffiCleanAction(private val pointer: Pointer?) : Runnable {
+        override fun run() {
+            pointer?.let { ptr ->
+                uniffiRustCall { status ->
+                    UniffiLib.INSTANCE.uniffi_janus_gateway_fn_free_audiobridgehandle(ptr, status)
+                }
+            }
+        }
+    }
+
+    fun uniffiClonePointer(): Pointer {
+        return uniffiRustCall() { status ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_clone_audiobridgehandle(pointer!!, status)
+        }
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `completeTrickle`(`timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_complete_trickle(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `configure`(`params`: AudioBridgeConfigureParams, `jsep`: Jsep?, `timeout`: java.time.Duration) : kotlin.String {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_configure(
+                thisPtr,
+                FfiConverterTypeAudioBridgeConfigureParams.lower(`params`),FfiConverterOptionalTypeJsep.lower(`jsep`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterString.lift(it) },
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `createRoom`(`params`: AudioBridgeCreateParams, `timeout`: java.time.Duration) : AudioBridgeRoomCreatedRsp {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_create_room(
+                thisPtr,
+                FfiConverterTypeAudioBridgeCreateParams.lower(`params`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterTypeAudioBridgeRoomCreatedRsp.lift(it) },
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `detach`(`timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_detach(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `exist`(`roomId`: JanusId, `timeout`: java.time.Duration) : kotlin.Boolean {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_exist(
+                thisPtr,
+                FfiConverterTypeJanusId.lower(`roomId`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_i8(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_i8(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_i8(future) },
+        // lift function
+        { FfiConverterBoolean.lift(it) },
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `fireAndForget`(`data`: kotlin.ByteArray) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_fire_and_forget(
+                thisPtr,
+                FfiConverterByteArray.lower(`data`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `fireAndForgetWithJsep`(`data`: kotlin.ByteArray, `jsep`: Jsep) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_fire_and_forget_with_jsep(
+                thisPtr,
+                FfiConverterByteArray.lower(`data`),FfiConverterTypeJsep.lower(`jsep`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `hangup`(`timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_hangup(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `joinRoom`(`params`: AudioBridgeJoinParams, `jsep`: Jsep?, `timeout`: java.time.Duration) : kotlin.String {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_join_room(
+                thisPtr,
+                FfiConverterTypeAudioBridgeJoinParams.lower(`params`),FfiConverterOptionalTypeJsep.lower(`jsep`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterString.lift(it) },
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `listParticipants`(`roomId`: JanusId, `timeout`: java.time.Duration) : AudioBridgeListParticipantsRsp {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_list_participants(
+                thisPtr,
+                FfiConverterTypeJanusId.lower(`roomId`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterTypeAudioBridgeListParticipantsRsp.lift(it) },
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `mute`(`params`: AudioBridgeMuteParams) : kotlin.String {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_mute(
+                thisPtr,
+                FfiConverterTypeAudioBridgeMuteParams.lower(`params`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterString.lift(it) },
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `sendWaitonAck`(`data`: kotlin.ByteArray, `timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_send_waiton_ack(
+                thisPtr,
+                FfiConverterByteArray.lower(`data`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `sendWaitonResult`(`data`: kotlin.ByteArray, `timeout`: java.time.Duration) : kotlin.ByteArray {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_send_waiton_result(
+                thisPtr,
+                FfiConverterByteArray.lower(`data`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterByteArray.lift(it) },
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `startEventLoop`(`cb`: AudioBridgeHandleCallback) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_start_event_loop(
+                thisPtr,
+                FfiConverterTypeAudioBridgeHandleCallback.lower(`cb`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        UniffiNullRustCallStatusErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `trickleCandidates`(`candidates`: List<Candidate>, `timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_trickle_candidates(
+                thisPtr,
+                FfiConverterSequenceTypeCandidate.lower(`candidates`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `trickleSingleCandidate`(`candidate`: Candidate, `timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_trickle_single_candidate(
+                thisPtr,
+                FfiConverterTypeCandidate.lower(`candidate`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `unmute`(`params`: AudioBridgeMuteParams) : kotlin.String {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_audiobridgehandle_unmute(
+                thisPtr,
+                FfiConverterTypeAudioBridgeMuteParams.lower(`params`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterString.lift(it) },
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+
+    
+    
+    companion object
+    
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeHandle: FfiConverter<AudioBridgeHandle, Pointer> {
+
+    override fun lower(value: AudioBridgeHandle): Pointer {
+        return value.uniffiClonePointer()
+    }
+
+    override fun lift(value: Pointer): AudioBridgeHandle {
+        return AudioBridgeHandle(value)
+    }
+
+    override fun read(buf: ByteBuffer): AudioBridgeHandle {
+        // The Rust code always writes pointers as 8 bytes, and will
+        // fail to compile if they don't fit.
+        return lift(Pointer(buf.getLong()))
+    }
+
+    override fun allocationSize(value: AudioBridgeHandle) = 8UL
+
+    override fun write(value: AudioBridgeHandle, buf: ByteBuffer) {
+        // The Rust code always expects pointers written as 8 bytes,
+        // and will fail to compile if they don't fit.
+        buf.putLong(Pointer.nativeValue(lower(value)))
+    }
+}
+
+
+// This template implements a class for working with a Rust struct via a Pointer/Arc<T>
+// to the live Rust struct on the other side of the FFI.
+//
+// Each instance implements core operations for working with the Rust `Arc<T>` and the
+// Kotlin Pointer to work with the live Rust struct on the other side of the FFI.
+//
+// There's some subtlety here, because we have to be careful not to operate on a Rust
+// struct after it has been dropped, and because we must expose a public API for freeing
+// theq Kotlin wrapper object in lieu of reliable finalizers. The core requirements are:
+//
+//   * Each instance holds an opaque pointer to the underlying Rust struct.
+//     Method calls need to read this pointer from the object's state and pass it in to
+//     the Rust FFI.
+//
+//   * When an instance is no longer needed, its pointer should be passed to a
+//     special destructor function provided by the Rust FFI, which will drop the
+//     underlying Rust struct.
+//
+//   * Given an instance, calling code is expected to call the special
+//     `destroy` method in order to free it after use, either by calling it explicitly
+//     or by using a higher-level helper like the `use` method. Failing to do so risks
+//     leaking the underlying Rust struct.
+//
+//   * We can't assume that calling code will do the right thing, and must be prepared
+//     to handle Kotlin method calls executing concurrently with or even after a call to
+//     `destroy`, and to handle multiple (possibly concurrent!) calls to `destroy`.
+//
+//   * We must never allow Rust code to operate on the underlying Rust struct after
+//     the destructor has been called, and must never call the destructor more than once.
+//     Doing so may trigger memory unsafety.
+//
+//   * To mitigate many of the risks of leaking memory and use-after-free unsafety, a `Cleaner`
+//     is implemented to call the destructor when the Kotlin object becomes unreachable.
+//     This is done in a background thread. This is not a panacea, and client code should be aware that
+//      1. the thread may starve if some there are objects that have poorly performing
+//     `drop` methods or do significant work in their `drop` methods.
+//      2. the thread is shared across the whole library. This can be tuned by using `android_cleaner = true`,
+//         or `android = true` in the [`kotlin` section of the `uniffi.toml` file](https://mozilla.github.io/uniffi-rs/kotlin/configuration.html).
+//
+// If we try to implement this with mutual exclusion on access to the pointer, there is the
+// possibility of a race between a method call and a concurrent call to `destroy`:
+//
+//    * Thread A starts a method call, reads the value of the pointer, but is interrupted
+//      before it can pass the pointer over the FFI to Rust.
+//    * Thread B calls `destroy` and frees the underlying Rust struct.
+//    * Thread A resumes, passing the already-read pointer value to Rust and triggering
+//      a use-after-free.
+//
+// One possible solution would be to use a `ReadWriteLock`, with each method call taking
+// a read lock (and thus allowed to run concurrently) and the special `destroy` method
+// taking a write lock (and thus blocking on live method calls). However, we aim not to
+// generate methods with any hidden blocking semantics, and a `destroy` method that might
+// block if called incorrectly seems to meet that bar.
+//
+// So, we achieve our goals by giving each instance an associated `AtomicLong` counter to track
+// the number of in-flight method calls, and an `AtomicBoolean` flag to indicate whether `destroy`
+// has been called. These are updated according to the following rules:
+//
+//    * The initial value of the counter is 1, indicating a live object with no in-flight calls.
+//      The initial value for the flag is false.
+//
+//    * At the start of each method call, we atomically check the counter.
+//      If it is 0 then the underlying Rust struct has already been destroyed and the call is aborted.
+//      If it is nonzero them we atomically increment it by 1 and proceed with the method call.
+//
+//    * At the end of each method call, we atomically decrement and check the counter.
+//      If it has reached zero then we destroy the underlying Rust struct.
+//
+//    * When `destroy` is called, we atomically flip the flag from false to true.
+//      If the flag was already true we silently fail.
+//      Otherwise we atomically decrement and check the counter.
+//      If it has reached zero then we destroy the underlying Rust struct.
+//
+// Astute readers may observe that this all sounds very similar to the way that Rust's `Arc<T>` works,
+// and indeed it is, with the addition of a flag to guard against multiple calls to `destroy`.
+//
+// The overall effect is that the underlying Rust struct is destroyed only when `destroy` has been
+// called *and* all in-flight method calls have completed, avoiding violating any of the expectations
+// of the underlying Rust code.
+//
+// This makes a cleaner a better alternative to _not_ calling `destroy()` as
+// and when the object is finished with, but the abstraction is not perfect: if the Rust object's `drop`
+// method is slow, and/or there are many objects to cleanup, and it's on a low end Android device, then the cleaner
+// thread may be starved, and the app will leak memory.
+//
+// In this case, `destroy`ing manually may be a better solution.
+//
+// The cleaner can live side by side with the manual calling of `destroy`. In the order of responsiveness, uniffi objects
+// with Rust peers are reclaimed:
+//
+// 1. By calling the `destroy` method of the object, which calls `rustObject.free()`. If that doesn't happen:
+// 2. When the object becomes unreachable, AND the Cleaner thread gets to call `rustObject.free()`. If the thread is starved then:
+// 3. The memory is reclaimed when the process terminates.
+//
+// [1] https://stackoverflow.com/questions/24376768/can-java-finalize-an-object-when-it-is-still-in-scope/24380219
+//
+
+
+public interface ConnectionInterface {
+    
+    suspend fun `createSession`(`keepAliveIntervalInSecs`: kotlin.UInt, `timeout`: java.time.Duration): Session
+    
+    suspend fun `serverInfo`(`timeout`: java.time.Duration): ServerInfoRsp
+    
+    companion object
+}
+
+open class Connection: Disposable, AutoCloseable, ConnectionInterface
+{
 
     constructor(pointer: Pointer) {
         this.pointer = pointer
@@ -1618,12 +2846,12 @@ open class Connection: Disposable, AutoCloseable, ConnectionInterface {
     
     @Throws(JanusGatewaySessionException::class)
     @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
-    override suspend fun `createSession`(`kaInterval`: kotlin.UInt, `timeout`: java.time.Duration) : Session {
+    override suspend fun `createSession`(`keepAliveIntervalInSecs`: kotlin.UInt, `timeout`: java.time.Duration) : Session {
         return uniffiRustCallAsync(
         callWithPointer { thisPtr ->
             UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_connection_create_session(
                 thisPtr,
-                FfiConverterUInt.lower(`kaInterval`),FfiConverterDuration.lower(`timeout`),
+                FfiConverterUInt.lower(`keepAliveIntervalInSecs`),FfiConverterDuration.lower(`timeout`),
             )
         },
         { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_pointer(future, callback, continuation) },
@@ -1633,6 +2861,27 @@ open class Connection: Disposable, AutoCloseable, ConnectionInterface {
         { FfiConverterTypeSession.lift(it) },
         // Error FFI converter
         JanusGatewaySessionException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `serverInfo`(`timeout`: java.time.Duration) : ServerInfoRsp {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_connection_server_info(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterTypeServerInfoRsp.lift(it) },
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
     )
     }
 
@@ -1773,16 +3022,35 @@ public object FfiConverterTypeConnection: FfiConverter<Connection, Pointer> {
 
 public interface EchotestHandleInterface {
     
-    suspend fun `start`(`audio`: kotlin.Boolean?, `video`: kotlin.Boolean?, `bitrate`: kotlin.UInt?)
+    suspend fun `completeTrickle`(`timeout`: java.time.Duration)
+    
+    suspend fun `detach`(`timeout`: java.time.Duration)
+    
+    suspend fun `fireAndForget`(`data`: kotlin.ByteArray)
+    
+    suspend fun `fireAndForgetWithJsep`(`data`: kotlin.ByteArray, `jsep`: Jsep)
+    
+    suspend fun `hangup`(`timeout`: java.time.Duration)
+    
+    suspend fun `sendWaitonAck`(`data`: kotlin.ByteArray, `timeout`: java.time.Duration)
+    
+    suspend fun `sendWaitonResult`(`data`: kotlin.ByteArray, `timeout`: java.time.Duration): kotlin.ByteArray
+    
+    suspend fun `start`(`params`: EchoTestStartParams)
     
     suspend fun `startEventLoop`(`cb`: EchotestHandleCallback)
     
-    suspend fun `startWithJsep`(`audio`: kotlin.Boolean?, `video`: kotlin.Boolean?, `bitrate`: kotlin.UInt?, `jsep`: Jsep, `timeout`: java.time.Duration)
+    suspend fun `startWithJsep`(`params`: EchoTestStartParams, `jsep`: Jsep, `timeout`: java.time.Duration)
+    
+    suspend fun `trickleCandidates`(`candidates`: List<Candidate>, `timeout`: java.time.Duration)
+    
+    suspend fun `trickleSingleCandidate`(`candidate`: Candidate, `timeout`: java.time.Duration)
     
     companion object
 }
 
-open class EchotestHandle: Disposable, AutoCloseable, EchotestHandleInterface {
+open class EchotestHandle: Disposable, AutoCloseable, EchotestHandleInterface
+{
 
     constructor(pointer: Pointer) {
         this.pointer = pointer
@@ -1866,12 +3134,165 @@ open class EchotestHandle: Disposable, AutoCloseable, EchotestHandleInterface {
     
     @Throws(JanusGatewayCommunicationException::class)
     @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
-    override suspend fun `start`(`audio`: kotlin.Boolean?, `video`: kotlin.Boolean?, `bitrate`: kotlin.UInt?) {
+    override suspend fun `completeTrickle`(`timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_echotesthandle_complete_trickle(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `detach`(`timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_echotesthandle_detach(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `fireAndForget`(`data`: kotlin.ByteArray) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_echotesthandle_fire_and_forget(
+                thisPtr,
+                FfiConverterByteArray.lower(`data`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `fireAndForgetWithJsep`(`data`: kotlin.ByteArray, `jsep`: Jsep) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_echotesthandle_fire_and_forget_with_jsep(
+                thisPtr,
+                FfiConverterByteArray.lower(`data`),FfiConverterTypeJsep.lower(`jsep`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `hangup`(`timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_echotesthandle_hangup(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `sendWaitonAck`(`data`: kotlin.ByteArray, `timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_echotesthandle_send_waiton_ack(
+                thisPtr,
+                FfiConverterByteArray.lower(`data`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `sendWaitonResult`(`data`: kotlin.ByteArray, `timeout`: java.time.Duration) : kotlin.ByteArray {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_echotesthandle_send_waiton_result(
+                thisPtr,
+                FfiConverterByteArray.lower(`data`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterByteArray.lift(it) },
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `start`(`params`: EchoTestStartParams) {
         return uniffiRustCallAsync(
         callWithPointer { thisPtr ->
             UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_echotesthandle_start(
                 thisPtr,
-                FfiConverterOptionalBoolean.lower(`audio`),FfiConverterOptionalBoolean.lower(`video`),FfiConverterOptionalUInt.lower(`bitrate`),
+                FfiConverterTypeEchoTestStartParams.lower(`params`),
             )
         },
         { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
@@ -1909,12 +3330,56 @@ open class EchotestHandle: Disposable, AutoCloseable, EchotestHandleInterface {
     
     @Throws(JanusGatewayCommunicationException::class)
     @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
-    override suspend fun `startWithJsep`(`audio`: kotlin.Boolean?, `video`: kotlin.Boolean?, `bitrate`: kotlin.UInt?, `jsep`: Jsep, `timeout`: java.time.Duration) {
+    override suspend fun `startWithJsep`(`params`: EchoTestStartParams, `jsep`: Jsep, `timeout`: java.time.Duration) {
         return uniffiRustCallAsync(
         callWithPointer { thisPtr ->
             UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_echotesthandle_start_with_jsep(
                 thisPtr,
-                FfiConverterOptionalBoolean.lower(`audio`),FfiConverterOptionalBoolean.lower(`video`),FfiConverterOptionalUInt.lower(`bitrate`),FfiConverterTypeJsep.lower(`jsep`),FfiConverterDuration.lower(`timeout`),
+                FfiConverterTypeEchoTestStartParams.lower(`params`),FfiConverterTypeJsep.lower(`jsep`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `trickleCandidates`(`candidates`: List<Candidate>, `timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_echotesthandle_trickle_candidates(
+                thisPtr,
+                FfiConverterSequenceTypeCandidate.lower(`candidates`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `trickleSingleCandidate`(`candidate`: Candidate, `timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_echotesthandle_trickle_single_candidate(
+                thisPtr,
+                FfiConverterTypeCandidate.lower(`candidate`),FfiConverterDuration.lower(`timeout`),
             )
         },
         { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
@@ -2065,9 +3530,15 @@ public object FfiConverterTypeEchotestHandle: FfiConverter<EchotestHandle, Point
 
 public interface HandleInterface {
     
+    suspend fun `completeTrickle`(`timeout`: java.time.Duration)
+    
+    suspend fun `detach`(`timeout`: java.time.Duration)
+    
     suspend fun `fireAndForget`(`data`: kotlin.ByteArray)
     
     suspend fun `fireAndForgetWithJsep`(`data`: kotlin.ByteArray, `jsep`: Jsep)
+    
+    suspend fun `hangup`(`timeout`: java.time.Duration)
     
     suspend fun `sendWaitonAck`(`data`: kotlin.ByteArray, `timeout`: java.time.Duration)
     
@@ -2075,10 +3546,15 @@ public interface HandleInterface {
     
     suspend fun `startEventLoop`(`cb`: HandleCallback)
     
+    suspend fun `trickleCandidates`(`candidates`: List<Candidate>, `timeout`: java.time.Duration)
+    
+    suspend fun `trickleSingleCandidate`(`candidate`: Candidate, `timeout`: java.time.Duration)
+    
     companion object
 }
 
-open class Handle: Disposable, AutoCloseable, HandleInterface {
+open class Handle: Disposable, AutoCloseable, HandleInterface
+{
 
     constructor(pointer: Pointer) {
         this.pointer = pointer
@@ -2162,6 +3638,50 @@ open class Handle: Disposable, AutoCloseable, HandleInterface {
     
     @Throws(JanusGatewayCommunicationException::class)
     @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `completeTrickle`(`timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_handle_complete_trickle(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `detach`(`timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_handle_detach(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
     override suspend fun `fireAndForget`(`data`: kotlin.ByteArray) {
         return uniffiRustCallAsync(
         callWithPointer { thisPtr ->
@@ -2190,6 +3710,28 @@ open class Handle: Disposable, AutoCloseable, HandleInterface {
             UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_handle_fire_and_forget_with_jsep(
                 thisPtr,
                 FfiConverterByteArray.lower(`data`),FfiConverterTypeJsep.lower(`jsep`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `hangup`(`timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_handle_hangup(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
             )
         },
         { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
@@ -2264,6 +3806,50 @@ open class Handle: Disposable, AutoCloseable, HandleInterface {
         
         // Error FFI converter
         UniffiNullRustCallStatusErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `trickleCandidates`(`candidates`: List<Candidate>, `timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_handle_trickle_candidates(
+                thisPtr,
+                FfiConverterSequenceTypeCandidate.lower(`candidates`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `trickleSingleCandidate`(`candidate`: Candidate, `timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_handle_trickle_single_candidate(
+                thisPtr,
+                FfiConverterTypeCandidate.lower(`candidate`),FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
     )
     }
 
@@ -2406,12 +3992,17 @@ public interface SessionInterface {
     
     suspend fun `attach`(`pluginId`: kotlin.String, `timeout`: java.time.Duration): Handle
     
+    suspend fun `attachAudioBridge`(`timeout`: java.time.Duration): AudioBridgeHandle
+    
     suspend fun `attachEchoTest`(`timeout`: java.time.Duration): EchotestHandle
+    
+    suspend fun `destory`(`timeout`: java.time.Duration)
     
     companion object
 }
 
-open class Session: Disposable, AutoCloseable, SessionInterface {
+open class Session: Disposable, AutoCloseable, SessionInterface
+{
 
     constructor(pointer: Pointer) {
         this.pointer = pointer
@@ -2516,6 +4107,27 @@ open class Session: Disposable, AutoCloseable, SessionInterface {
     
     @Throws(JanusGatewayHandleException::class)
     @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `attachAudioBridge`(`timeout`: java.time.Duration) : AudioBridgeHandle {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_session_attach_audio_bridge(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_pointer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_pointer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_pointer(future) },
+        // lift function
+        { FfiConverterTypeAudioBridgeHandle.lift(it) },
+        // Error FFI converter
+        JanusGatewayHandleException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayHandleException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
     override suspend fun `attachEchoTest`(`timeout`: java.time.Duration) : EchotestHandle {
         return uniffiRustCallAsync(
         callWithPointer { thisPtr ->
@@ -2531,6 +4143,28 @@ open class Session: Disposable, AutoCloseable, SessionInterface {
         { FfiConverterTypeEchotestHandle.lift(it) },
         // Error FFI converter
         JanusGatewayHandleException.ErrorHandler,
+    )
+    }
+
+    
+    @Throws(JanusGatewayCommunicationException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `destory`(`timeout`: java.time.Duration) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_janus_gateway_fn_method_session_destory(
+                thisPtr,
+                FfiConverterDuration.lower(`timeout`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        JanusGatewayCommunicationException.ErrorHandler,
     )
     }
 
@@ -2572,11 +4206,624 @@ public object FfiConverterTypeSession: FfiConverter<Session, Pointer> {
 
 
 
+data class AudioBridgeConfigureParams (
+    val `muted`: kotlin.Boolean? = null, 
+    val `display`: kotlin.String? = null, 
+    val `bitrate`: kotlin.ULong? = null, 
+    val `quality`: kotlin.UByte? = null, 
+    val `expectedLoss`: kotlin.UByte? = null, 
+    val `volume`: kotlin.ULong? = null, 
+    val `spatialPosition`: kotlin.UByte? = null, 
+    val `denoise`: kotlin.Boolean? = null, 
+    val `record`: kotlin.Boolean? = null, 
+    val `filename`: kotlin.String? = null, 
+    val `group`: kotlin.String? = null
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeConfigureParams: FfiConverterRustBuffer<AudioBridgeConfigureParams> {
+    override fun read(buf: ByteBuffer): AudioBridgeConfigureParams {
+        return AudioBridgeConfigureParams(
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalULong.read(buf),
+            FfiConverterOptionalUByte.read(buf),
+            FfiConverterOptionalUByte.read(buf),
+            FfiConverterOptionalULong.read(buf),
+            FfiConverterOptionalUByte.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalString.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: AudioBridgeConfigureParams) = (
+            FfiConverterOptionalBoolean.allocationSize(value.`muted`) +
+            FfiConverterOptionalString.allocationSize(value.`display`) +
+            FfiConverterOptionalULong.allocationSize(value.`bitrate`) +
+            FfiConverterOptionalUByte.allocationSize(value.`quality`) +
+            FfiConverterOptionalUByte.allocationSize(value.`expectedLoss`) +
+            FfiConverterOptionalULong.allocationSize(value.`volume`) +
+            FfiConverterOptionalUByte.allocationSize(value.`spatialPosition`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`denoise`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`record`) +
+            FfiConverterOptionalString.allocationSize(value.`filename`) +
+            FfiConverterOptionalString.allocationSize(value.`group`)
+    )
+
+    override fun write(value: AudioBridgeConfigureParams, buf: ByteBuffer) {
+            FfiConverterOptionalBoolean.write(value.`muted`, buf)
+            FfiConverterOptionalString.write(value.`display`, buf)
+            FfiConverterOptionalULong.write(value.`bitrate`, buf)
+            FfiConverterOptionalUByte.write(value.`quality`, buf)
+            FfiConverterOptionalUByte.write(value.`expectedLoss`, buf)
+            FfiConverterOptionalULong.write(value.`volume`, buf)
+            FfiConverterOptionalUByte.write(value.`spatialPosition`, buf)
+            FfiConverterOptionalBoolean.write(value.`denoise`, buf)
+            FfiConverterOptionalBoolean.write(value.`record`, buf)
+            FfiConverterOptionalString.write(value.`filename`, buf)
+            FfiConverterOptionalString.write(value.`group`, buf)
+    }
+}
+
+
+
+data class AudioBridgeCreateParams (
+    val `room`: JanusId? = null, 
+    val `permanent`: kotlin.Boolean? = null, 
+    val `description`: kotlin.String? = null, 
+    val `secret`: kotlin.String? = null, 
+    val `pin`: kotlin.String? = null, 
+    val `isPrivate`: kotlin.Boolean? = null, 
+    val `allowed`: List<kotlin.String>? = null, 
+    val `samplingRate`: kotlin.ULong? = null, 
+    val `spatialAudio`: kotlin.Boolean? = null, 
+    val `audiolevelExt`: kotlin.Boolean? = null, 
+    val `audiolevelEvent`: kotlin.Boolean? = null, 
+    val `audioActivePackets`: kotlin.ULong? = null, 
+    val `defaultExpectedloss`: kotlin.ULong? = null, 
+    val `defaultBitrate`: kotlin.ULong? = null, 
+    val `record`: kotlin.Boolean? = null, 
+    val `recordFile`: kotlin.String? = null, 
+    val `recordDir`: kotlin.String? = null, 
+    val `mjrs`: kotlin.Boolean? = null, 
+    val `mjrsDir`: kotlin.String? = null, 
+    val `allowRtpParticipants`: kotlin.Boolean? = null, 
+    val `groups`: List<kotlin.String>? = null
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeCreateParams: FfiConverterRustBuffer<AudioBridgeCreateParams> {
+    override fun read(buf: ByteBuffer): AudioBridgeCreateParams {
+        return AudioBridgeCreateParams(
+            FfiConverterOptionalTypeJanusId.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalSequenceString.read(buf),
+            FfiConverterOptionalULong.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalULong.read(buf),
+            FfiConverterOptionalULong.read(buf),
+            FfiConverterOptionalULong.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalSequenceString.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: AudioBridgeCreateParams) = (
+            FfiConverterOptionalTypeJanusId.allocationSize(value.`room`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`permanent`) +
+            FfiConverterOptionalString.allocationSize(value.`description`) +
+            FfiConverterOptionalString.allocationSize(value.`secret`) +
+            FfiConverterOptionalString.allocationSize(value.`pin`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`isPrivate`) +
+            FfiConverterOptionalSequenceString.allocationSize(value.`allowed`) +
+            FfiConverterOptionalULong.allocationSize(value.`samplingRate`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`spatialAudio`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`audiolevelExt`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`audiolevelEvent`) +
+            FfiConverterOptionalULong.allocationSize(value.`audioActivePackets`) +
+            FfiConverterOptionalULong.allocationSize(value.`defaultExpectedloss`) +
+            FfiConverterOptionalULong.allocationSize(value.`defaultBitrate`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`record`) +
+            FfiConverterOptionalString.allocationSize(value.`recordFile`) +
+            FfiConverterOptionalString.allocationSize(value.`recordDir`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`mjrs`) +
+            FfiConverterOptionalString.allocationSize(value.`mjrsDir`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`allowRtpParticipants`) +
+            FfiConverterOptionalSequenceString.allocationSize(value.`groups`)
+    )
+
+    override fun write(value: AudioBridgeCreateParams, buf: ByteBuffer) {
+            FfiConverterOptionalTypeJanusId.write(value.`room`, buf)
+            FfiConverterOptionalBoolean.write(value.`permanent`, buf)
+            FfiConverterOptionalString.write(value.`description`, buf)
+            FfiConverterOptionalString.write(value.`secret`, buf)
+            FfiConverterOptionalString.write(value.`pin`, buf)
+            FfiConverterOptionalBoolean.write(value.`isPrivate`, buf)
+            FfiConverterOptionalSequenceString.write(value.`allowed`, buf)
+            FfiConverterOptionalULong.write(value.`samplingRate`, buf)
+            FfiConverterOptionalBoolean.write(value.`spatialAudio`, buf)
+            FfiConverterOptionalBoolean.write(value.`audiolevelExt`, buf)
+            FfiConverterOptionalBoolean.write(value.`audiolevelEvent`, buf)
+            FfiConverterOptionalULong.write(value.`audioActivePackets`, buf)
+            FfiConverterOptionalULong.write(value.`defaultExpectedloss`, buf)
+            FfiConverterOptionalULong.write(value.`defaultBitrate`, buf)
+            FfiConverterOptionalBoolean.write(value.`record`, buf)
+            FfiConverterOptionalString.write(value.`recordFile`, buf)
+            FfiConverterOptionalString.write(value.`recordDir`, buf)
+            FfiConverterOptionalBoolean.write(value.`mjrs`, buf)
+            FfiConverterOptionalString.write(value.`mjrsDir`, buf)
+            FfiConverterOptionalBoolean.write(value.`allowRtpParticipants`, buf)
+            FfiConverterOptionalSequenceString.write(value.`groups`, buf)
+    }
+}
+
+
+
+data class AudioBridgeJoinParams (
+    val `room`: JanusId, 
+    val `optional`: AudioBridgeJoinParamsOptional
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeJoinParams: FfiConverterRustBuffer<AudioBridgeJoinParams> {
+    override fun read(buf: ByteBuffer): AudioBridgeJoinParams {
+        return AudioBridgeJoinParams(
+            FfiConverterTypeJanusId.read(buf),
+            FfiConverterTypeAudioBridgeJoinParamsOptional.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: AudioBridgeJoinParams) = (
+            FfiConverterTypeJanusId.allocationSize(value.`room`) +
+            FfiConverterTypeAudioBridgeJoinParamsOptional.allocationSize(value.`optional`)
+    )
+
+    override fun write(value: AudioBridgeJoinParams, buf: ByteBuffer) {
+            FfiConverterTypeJanusId.write(value.`room`, buf)
+            FfiConverterTypeAudioBridgeJoinParamsOptional.write(value.`optional`, buf)
+    }
+}
+
+
+
+data class AudioBridgeJoinParamsOptional (
+    val `id`: JanusId? = null, 
+    val `group`: kotlin.String? = null, 
+    val `pin`: kotlin.String? = null, 
+    val `display`: kotlin.String? = null, 
+    val `token`: kotlin.String? = null, 
+    val `muted`: kotlin.Boolean? = null, 
+    val `suspended`: kotlin.Boolean? = null, 
+    val `pauseEvents`: kotlin.Boolean? = null, 
+    val `codec`: AudioBridgeCodec? = null, 
+    val `bitrate`: kotlin.ULong? = null, 
+    val `quality`: kotlin.UByte? = null, 
+    val `expectedLoss`: kotlin.UByte? = null, 
+    val `volume`: kotlin.ULong? = null, 
+    val `spatialPosition`: kotlin.UByte? = null, 
+    val `secret`: kotlin.String? = null, 
+    val `audioLevelAverage`: kotlin.ULong? = null, 
+    val `audioActivePackets`: kotlin.ULong? = null, 
+    val `record`: kotlin.Boolean? = null, 
+    val `filename`: kotlin.String? = null, 
+    val `generateOffer`: kotlin.Boolean? = null, 
+    val `rtp`: AudioBridgeRtp? = null
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeJoinParamsOptional: FfiConverterRustBuffer<AudioBridgeJoinParamsOptional> {
+    override fun read(buf: ByteBuffer): AudioBridgeJoinParamsOptional {
+        return AudioBridgeJoinParamsOptional(
+            FfiConverterOptionalTypeJanusId.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalTypeAudioBridgeCodec.read(buf),
+            FfiConverterOptionalULong.read(buf),
+            FfiConverterOptionalUByte.read(buf),
+            FfiConverterOptionalUByte.read(buf),
+            FfiConverterOptionalULong.read(buf),
+            FfiConverterOptionalUByte.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalULong.read(buf),
+            FfiConverterOptionalULong.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalTypeAudioBridgeRTP.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: AudioBridgeJoinParamsOptional) = (
+            FfiConverterOptionalTypeJanusId.allocationSize(value.`id`) +
+            FfiConverterOptionalString.allocationSize(value.`group`) +
+            FfiConverterOptionalString.allocationSize(value.`pin`) +
+            FfiConverterOptionalString.allocationSize(value.`display`) +
+            FfiConverterOptionalString.allocationSize(value.`token`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`muted`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`suspended`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`pauseEvents`) +
+            FfiConverterOptionalTypeAudioBridgeCodec.allocationSize(value.`codec`) +
+            FfiConverterOptionalULong.allocationSize(value.`bitrate`) +
+            FfiConverterOptionalUByte.allocationSize(value.`quality`) +
+            FfiConverterOptionalUByte.allocationSize(value.`expectedLoss`) +
+            FfiConverterOptionalULong.allocationSize(value.`volume`) +
+            FfiConverterOptionalUByte.allocationSize(value.`spatialPosition`) +
+            FfiConverterOptionalString.allocationSize(value.`secret`) +
+            FfiConverterOptionalULong.allocationSize(value.`audioLevelAverage`) +
+            FfiConverterOptionalULong.allocationSize(value.`audioActivePackets`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`record`) +
+            FfiConverterOptionalString.allocationSize(value.`filename`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`generateOffer`) +
+            FfiConverterOptionalTypeAudioBridgeRTP.allocationSize(value.`rtp`)
+    )
+
+    override fun write(value: AudioBridgeJoinParamsOptional, buf: ByteBuffer) {
+            FfiConverterOptionalTypeJanusId.write(value.`id`, buf)
+            FfiConverterOptionalString.write(value.`group`, buf)
+            FfiConverterOptionalString.write(value.`pin`, buf)
+            FfiConverterOptionalString.write(value.`display`, buf)
+            FfiConverterOptionalString.write(value.`token`, buf)
+            FfiConverterOptionalBoolean.write(value.`muted`, buf)
+            FfiConverterOptionalBoolean.write(value.`suspended`, buf)
+            FfiConverterOptionalBoolean.write(value.`pauseEvents`, buf)
+            FfiConverterOptionalTypeAudioBridgeCodec.write(value.`codec`, buf)
+            FfiConverterOptionalULong.write(value.`bitrate`, buf)
+            FfiConverterOptionalUByte.write(value.`quality`, buf)
+            FfiConverterOptionalUByte.write(value.`expectedLoss`, buf)
+            FfiConverterOptionalULong.write(value.`volume`, buf)
+            FfiConverterOptionalUByte.write(value.`spatialPosition`, buf)
+            FfiConverterOptionalString.write(value.`secret`, buf)
+            FfiConverterOptionalULong.write(value.`audioLevelAverage`, buf)
+            FfiConverterOptionalULong.write(value.`audioActivePackets`, buf)
+            FfiConverterOptionalBoolean.write(value.`record`, buf)
+            FfiConverterOptionalString.write(value.`filename`, buf)
+            FfiConverterOptionalBoolean.write(value.`generateOffer`, buf)
+            FfiConverterOptionalTypeAudioBridgeRTP.write(value.`rtp`, buf)
+    }
+}
+
+
+
+data class AudioBridgeListParticipantsRsp (
+    val `room`: JanusId, 
+    val `participants`: List<AudioBridgeParticipant>
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeListParticipantsRsp: FfiConverterRustBuffer<AudioBridgeListParticipantsRsp> {
+    override fun read(buf: ByteBuffer): AudioBridgeListParticipantsRsp {
+        return AudioBridgeListParticipantsRsp(
+            FfiConverterTypeJanusId.read(buf),
+            FfiConverterSequenceTypeAudioBridgeParticipant.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: AudioBridgeListParticipantsRsp) = (
+            FfiConverterTypeJanusId.allocationSize(value.`room`) +
+            FfiConverterSequenceTypeAudioBridgeParticipant.allocationSize(value.`participants`)
+    )
+
+    override fun write(value: AudioBridgeListParticipantsRsp, buf: ByteBuffer) {
+            FfiConverterTypeJanusId.write(value.`room`, buf)
+            FfiConverterSequenceTypeAudioBridgeParticipant.write(value.`participants`, buf)
+    }
+}
+
+
+
+data class AudioBridgeMuteParams (
+    val `id`: JanusId, 
+    val `room`: JanusId, 
+    val `secret`: kotlin.String? = null
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeMuteParams: FfiConverterRustBuffer<AudioBridgeMuteParams> {
+    override fun read(buf: ByteBuffer): AudioBridgeMuteParams {
+        return AudioBridgeMuteParams(
+            FfiConverterTypeJanusId.read(buf),
+            FfiConverterTypeJanusId.read(buf),
+            FfiConverterOptionalString.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: AudioBridgeMuteParams) = (
+            FfiConverterTypeJanusId.allocationSize(value.`id`) +
+            FfiConverterTypeJanusId.allocationSize(value.`room`) +
+            FfiConverterOptionalString.allocationSize(value.`secret`)
+    )
+
+    override fun write(value: AudioBridgeMuteParams, buf: ByteBuffer) {
+            FfiConverterTypeJanusId.write(value.`id`, buf)
+            FfiConverterTypeJanusId.write(value.`room`, buf)
+            FfiConverterOptionalString.write(value.`secret`, buf)
+    }
+}
+
+
+
+data class AudioBridgeParticipant (
+    val `id`: JanusId, 
+    val `display`: kotlin.String?, 
+    val `setup`: kotlin.Boolean, 
+    val `muted`: kotlin.Boolean, 
+    val `suspended`: kotlin.Boolean?, 
+    val `talking`: kotlin.Boolean?, 
+    val `spatialPosition`: kotlin.ULong?
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeParticipant: FfiConverterRustBuffer<AudioBridgeParticipant> {
+    override fun read(buf: ByteBuffer): AudioBridgeParticipant {
+        return AudioBridgeParticipant(
+            FfiConverterTypeJanusId.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalULong.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: AudioBridgeParticipant) = (
+            FfiConverterTypeJanusId.allocationSize(value.`id`) +
+            FfiConverterOptionalString.allocationSize(value.`display`) +
+            FfiConverterBoolean.allocationSize(value.`setup`) +
+            FfiConverterBoolean.allocationSize(value.`muted`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`suspended`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`talking`) +
+            FfiConverterOptionalULong.allocationSize(value.`spatialPosition`)
+    )
+
+    override fun write(value: AudioBridgeParticipant, buf: ByteBuffer) {
+            FfiConverterTypeJanusId.write(value.`id`, buf)
+            FfiConverterOptionalString.write(value.`display`, buf)
+            FfiConverterBoolean.write(value.`setup`, buf)
+            FfiConverterBoolean.write(value.`muted`, buf)
+            FfiConverterOptionalBoolean.write(value.`suspended`, buf)
+            FfiConverterOptionalBoolean.write(value.`talking`, buf)
+            FfiConverterOptionalULong.write(value.`spatialPosition`, buf)
+    }
+}
+
+
+
+data class AudioBridgeRtp (
+    val `required`: AudioBridgeRtpRequired, 
+    val `optional`: AudioBridgeRtpOptional
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeRTP: FfiConverterRustBuffer<AudioBridgeRtp> {
+    override fun read(buf: ByteBuffer): AudioBridgeRtp {
+        return AudioBridgeRtp(
+            FfiConverterTypeAudioBridgeRTPRequired.read(buf),
+            FfiConverterTypeAudioBridgeRTPOptional.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: AudioBridgeRtp) = (
+            FfiConverterTypeAudioBridgeRTPRequired.allocationSize(value.`required`) +
+            FfiConverterTypeAudioBridgeRTPOptional.allocationSize(value.`optional`)
+    )
+
+    override fun write(value: AudioBridgeRtp, buf: ByteBuffer) {
+            FfiConverterTypeAudioBridgeRTPRequired.write(value.`required`, buf)
+            FfiConverterTypeAudioBridgeRTPOptional.write(value.`optional`, buf)
+    }
+}
+
+
+
+data class AudioBridgeRtpOptional (
+    val `payloadType`: kotlin.String? = null, 
+    val `audiolevelExt`: kotlin.String? = null, 
+    val `fec`: kotlin.Boolean? = null
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeRTPOptional: FfiConverterRustBuffer<AudioBridgeRtpOptional> {
+    override fun read(buf: ByteBuffer): AudioBridgeRtpOptional {
+        return AudioBridgeRtpOptional(
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: AudioBridgeRtpOptional) = (
+            FfiConverterOptionalString.allocationSize(value.`payloadType`) +
+            FfiConverterOptionalString.allocationSize(value.`audiolevelExt`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`fec`)
+    )
+
+    override fun write(value: AudioBridgeRtpOptional, buf: ByteBuffer) {
+            FfiConverterOptionalString.write(value.`payloadType`, buf)
+            FfiConverterOptionalString.write(value.`audiolevelExt`, buf)
+            FfiConverterOptionalBoolean.write(value.`fec`, buf)
+    }
+}
+
+
+
+data class AudioBridgeRtpRequired (
+    val `ip`: kotlin.String, 
+    val `port`: kotlin.UShort
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeRTPRequired: FfiConverterRustBuffer<AudioBridgeRtpRequired> {
+    override fun read(buf: ByteBuffer): AudioBridgeRtpRequired {
+        return AudioBridgeRtpRequired(
+            FfiConverterString.read(buf),
+            FfiConverterUShort.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: AudioBridgeRtpRequired) = (
+            FfiConverterString.allocationSize(value.`ip`) +
+            FfiConverterUShort.allocationSize(value.`port`)
+    )
+
+    override fun write(value: AudioBridgeRtpRequired, buf: ByteBuffer) {
+            FfiConverterString.write(value.`ip`, buf)
+            FfiConverterUShort.write(value.`port`, buf)
+    }
+}
+
+
+
+data class AudioBridgeRoomCreatedRsp (
+    val `room`: JanusId, 
+    val `permanent`: kotlin.Boolean
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeRoomCreatedRsp: FfiConverterRustBuffer<AudioBridgeRoomCreatedRsp> {
+    override fun read(buf: ByteBuffer): AudioBridgeRoomCreatedRsp {
+        return AudioBridgeRoomCreatedRsp(
+            FfiConverterTypeJanusId.read(buf),
+            FfiConverterBoolean.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: AudioBridgeRoomCreatedRsp) = (
+            FfiConverterTypeJanusId.allocationSize(value.`room`) +
+            FfiConverterBoolean.allocationSize(value.`permanent`)
+    )
+
+    override fun write(value: AudioBridgeRoomCreatedRsp, buf: ByteBuffer) {
+            FfiConverterTypeJanusId.write(value.`room`, buf)
+            FfiConverterBoolean.write(value.`permanent`, buf)
+    }
+}
+
+
+
+data class Candidate (
+    val `candidate`: kotlin.String, 
+    val `sdpMid`: kotlin.String, 
+    val `sdpMlineIndex`: kotlin.UInt
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeCandidate: FfiConverterRustBuffer<Candidate> {
+    override fun read(buf: ByteBuffer): Candidate {
+        return Candidate(
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterUInt.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: Candidate) = (
+            FfiConverterString.allocationSize(value.`candidate`) +
+            FfiConverterString.allocationSize(value.`sdpMid`) +
+            FfiConverterUInt.allocationSize(value.`sdpMlineIndex`)
+    )
+
+    override fun write(value: Candidate, buf: ByteBuffer) {
+            FfiConverterString.write(value.`candidate`, buf)
+            FfiConverterString.write(value.`sdpMid`, buf)
+            FfiConverterUInt.write(value.`sdpMlineIndex`, buf)
+    }
+}
+
+
+
 data class Config (
+    /**
+     * Server URL
+     */
     val `url`: kotlin.String, 
+    /**
+     * Buffer capacity
+     */
     val `capacity`: kotlin.UShort, 
-    val `apisecret`: kotlin.String?, 
-    val `serverRoot`: kotlin.String?
+    /**
+     * API secret
+     */
+    val `apisecret`: kotlin.String? = null, 
+    val `serverRoot`: kotlin.String = "janus"
 ) {
     
     companion object
@@ -2591,7 +4838,7 @@ public object FfiConverterTypeConfig: FfiConverterRustBuffer<Config> {
             FfiConverterString.read(buf),
             FfiConverterUShort.read(buf),
             FfiConverterOptionalString.read(buf),
-            FfiConverterOptionalString.read(buf),
+            FfiConverterString.read(buf),
         )
     }
 
@@ -2599,14 +4846,106 @@ public object FfiConverterTypeConfig: FfiConverterRustBuffer<Config> {
             FfiConverterString.allocationSize(value.`url`) +
             FfiConverterUShort.allocationSize(value.`capacity`) +
             FfiConverterOptionalString.allocationSize(value.`apisecret`) +
-            FfiConverterOptionalString.allocationSize(value.`serverRoot`)
+            FfiConverterString.allocationSize(value.`serverRoot`)
     )
 
     override fun write(value: Config, buf: ByteBuffer) {
             FfiConverterString.write(value.`url`, buf)
             FfiConverterUShort.write(value.`capacity`, buf)
             FfiConverterOptionalString.write(value.`apisecret`, buf)
-            FfiConverterOptionalString.write(value.`serverRoot`, buf)
+            FfiConverterString.write(value.`serverRoot`, buf)
+    }
+}
+
+
+
+data class EchoTestStartParams (
+    val `audio`: kotlin.Boolean? = null, 
+    val `video`: kotlin.Boolean? = null, 
+    val `bitrate`: kotlin.UInt? = null, 
+    val `record`: kotlin.Boolean? = null, 
+    val `filename`: kotlin.String? = null, 
+    val `substream`: kotlin.UInt? = null, 
+    val `temporal`: kotlin.UInt? = null, 
+    val `fallback`: kotlin.UInt? = null, 
+    val `svc`: kotlin.Boolean? = null, 
+    val `spatialLayer`: kotlin.UInt? = null, 
+    val `temporalLayer`: kotlin.UInt? = null, 
+    val `audiocodec`: kotlin.String? = null, 
+    val `videocodec`: kotlin.String? = null, 
+    val `videoprofile`: kotlin.String? = null, 
+    val `opusred`: kotlin.Boolean? = null, 
+    val `minDelay`: kotlin.Int? = null, 
+    val `maxDelay`: kotlin.Int? = null
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeEchoTestStartParams: FfiConverterRustBuffer<EchoTestStartParams> {
+    override fun read(buf: ByteBuffer): EchoTestStartParams {
+        return EchoTestStartParams(
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalUInt.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalUInt.read(buf),
+            FfiConverterOptionalUInt.read(buf),
+            FfiConverterOptionalUInt.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalUInt.read(buf),
+            FfiConverterOptionalUInt.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
+            FfiConverterOptionalInt.read(buf),
+            FfiConverterOptionalInt.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: EchoTestStartParams) = (
+            FfiConverterOptionalBoolean.allocationSize(value.`audio`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`video`) +
+            FfiConverterOptionalUInt.allocationSize(value.`bitrate`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`record`) +
+            FfiConverterOptionalString.allocationSize(value.`filename`) +
+            FfiConverterOptionalUInt.allocationSize(value.`substream`) +
+            FfiConverterOptionalUInt.allocationSize(value.`temporal`) +
+            FfiConverterOptionalUInt.allocationSize(value.`fallback`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`svc`) +
+            FfiConverterOptionalUInt.allocationSize(value.`spatialLayer`) +
+            FfiConverterOptionalUInt.allocationSize(value.`temporalLayer`) +
+            FfiConverterOptionalString.allocationSize(value.`audiocodec`) +
+            FfiConverterOptionalString.allocationSize(value.`videocodec`) +
+            FfiConverterOptionalString.allocationSize(value.`videoprofile`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`opusred`) +
+            FfiConverterOptionalInt.allocationSize(value.`minDelay`) +
+            FfiConverterOptionalInt.allocationSize(value.`maxDelay`)
+    )
+
+    override fun write(value: EchoTestStartParams, buf: ByteBuffer) {
+            FfiConverterOptionalBoolean.write(value.`audio`, buf)
+            FfiConverterOptionalBoolean.write(value.`video`, buf)
+            FfiConverterOptionalUInt.write(value.`bitrate`, buf)
+            FfiConverterOptionalBoolean.write(value.`record`, buf)
+            FfiConverterOptionalString.write(value.`filename`, buf)
+            FfiConverterOptionalUInt.write(value.`substream`, buf)
+            FfiConverterOptionalUInt.write(value.`temporal`, buf)
+            FfiConverterOptionalUInt.write(value.`fallback`, buf)
+            FfiConverterOptionalBoolean.write(value.`svc`, buf)
+            FfiConverterOptionalUInt.write(value.`spatialLayer`, buf)
+            FfiConverterOptionalUInt.write(value.`temporalLayer`, buf)
+            FfiConverterOptionalString.write(value.`audiocodec`, buf)
+            FfiConverterOptionalString.write(value.`videocodec`, buf)
+            FfiConverterOptionalString.write(value.`videoprofile`, buf)
+            FfiConverterOptionalBoolean.write(value.`opusred`, buf)
+            FfiConverterOptionalInt.write(value.`minDelay`, buf)
+            FfiConverterOptionalInt.write(value.`maxDelay`, buf)
     }
 }
 
@@ -2614,6 +4953,7 @@ public object FfiConverterTypeConfig: FfiConverterRustBuffer<Config> {
 
 data class Jsep (
     val `jsepType`: JsepType, 
+    val `trickle`: kotlin.Boolean? = null, 
     val `sdp`: kotlin.String
 ) {
     
@@ -2627,20 +4967,335 @@ public object FfiConverterTypeJsep: FfiConverterRustBuffer<Jsep> {
     override fun read(buf: ByteBuffer): Jsep {
         return Jsep(
             FfiConverterTypeJsepType.read(buf),
+            FfiConverterOptionalBoolean.read(buf),
             FfiConverterString.read(buf),
         )
     }
 
     override fun allocationSize(value: Jsep) = (
             FfiConverterTypeJsepType.allocationSize(value.`jsepType`) +
+            FfiConverterOptionalBoolean.allocationSize(value.`trickle`) +
             FfiConverterString.allocationSize(value.`sdp`)
     )
 
     override fun write(value: Jsep, buf: ByteBuffer) {
             FfiConverterTypeJsepType.write(value.`jsepType`, buf)
+            FfiConverterOptionalBoolean.write(value.`trickle`, buf)
             FfiConverterString.write(value.`sdp`, buf)
     }
 }
+
+
+
+data class MetaData (
+    val `name`: kotlin.String, 
+    val `author`: kotlin.String, 
+    val `description`: kotlin.String, 
+    val `versionString`: kotlin.String, 
+    val `version`: kotlin.ULong
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeMetaData: FfiConverterRustBuffer<MetaData> {
+    override fun read(buf: ByteBuffer): MetaData {
+        return MetaData(
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterULong.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: MetaData) = (
+            FfiConverterString.allocationSize(value.`name`) +
+            FfiConverterString.allocationSize(value.`author`) +
+            FfiConverterString.allocationSize(value.`description`) +
+            FfiConverterString.allocationSize(value.`versionString`) +
+            FfiConverterULong.allocationSize(value.`version`)
+    )
+
+    override fun write(value: MetaData, buf: ByteBuffer) {
+            FfiConverterString.write(value.`name`, buf)
+            FfiConverterString.write(value.`author`, buf)
+            FfiConverterString.write(value.`description`, buf)
+            FfiConverterString.write(value.`versionString`, buf)
+            FfiConverterULong.write(value.`version`, buf)
+    }
+}
+
+
+
+data class ServerInfoRsp (
+    val `name`: kotlin.String, 
+    val `version`: kotlin.ULong, 
+    val `versionString`: kotlin.String, 
+    val `author`: kotlin.String, 
+    val `commitHash`: kotlin.String, 
+    val `compileTime`: kotlin.String, 
+    val `logToStdout`: kotlin.Boolean, 
+    val `logToFile`: kotlin.Boolean, 
+    val `dataChannels`: kotlin.Boolean, 
+    val `acceptingNewSessions`: kotlin.Boolean, 
+    val `sessionTimeout`: kotlin.ULong, 
+    val `reclaimSessionTimeout`: kotlin.ULong, 
+    val `candidatesTimeout`: kotlin.ULong, 
+    val `serverName`: kotlin.String, 
+    val `localIp`: kotlin.String, 
+    val `ipv6`: kotlin.Boolean, 
+    val `iceLite`: kotlin.Boolean, 
+    val `iceTcp`: kotlin.Boolean, 
+    val `iceNomination`: kotlin.String, 
+    val `iceKeepaliveConncheck`: kotlin.Boolean, 
+    val `fullTrickle`: kotlin.Boolean, 
+    val `mdnsEnabled`: kotlin.Boolean, 
+    val `minNackQueue`: kotlin.ULong, 
+    val `twccPeriod`: kotlin.ULong, 
+    val `dtlsMtu`: kotlin.ULong, 
+    val `staticEventLoops`: kotlin.ULong, 
+    val `apiSecret`: kotlin.Boolean, 
+    val `authToken`: kotlin.Boolean, 
+    val `eventHandlers`: kotlin.Boolean, 
+    val `opaqueidInApi`: kotlin.Boolean, 
+    val `dependencies`: Map<kotlin.String, kotlin.String>, 
+    val `transports`: Map<kotlin.String, MetaData>, 
+    val `plugins`: Map<kotlin.String, MetaData>
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeServerInfoRsp: FfiConverterRustBuffer<ServerInfoRsp> {
+    override fun read(buf: ByteBuffer): ServerInfoRsp {
+        return ServerInfoRsp(
+            FfiConverterString.read(buf),
+            FfiConverterULong.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterULong.read(buf),
+            FfiConverterULong.read(buf),
+            FfiConverterULong.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterULong.read(buf),
+            FfiConverterULong.read(buf),
+            FfiConverterULong.read(buf),
+            FfiConverterULong.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterMapStringString.read(buf),
+            FfiConverterMapStringTypeMetaData.read(buf),
+            FfiConverterMapStringTypeMetaData.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: ServerInfoRsp) = (
+            FfiConverterString.allocationSize(value.`name`) +
+            FfiConverterULong.allocationSize(value.`version`) +
+            FfiConverterString.allocationSize(value.`versionString`) +
+            FfiConverterString.allocationSize(value.`author`) +
+            FfiConverterString.allocationSize(value.`commitHash`) +
+            FfiConverterString.allocationSize(value.`compileTime`) +
+            FfiConverterBoolean.allocationSize(value.`logToStdout`) +
+            FfiConverterBoolean.allocationSize(value.`logToFile`) +
+            FfiConverterBoolean.allocationSize(value.`dataChannels`) +
+            FfiConverterBoolean.allocationSize(value.`acceptingNewSessions`) +
+            FfiConverterULong.allocationSize(value.`sessionTimeout`) +
+            FfiConverterULong.allocationSize(value.`reclaimSessionTimeout`) +
+            FfiConverterULong.allocationSize(value.`candidatesTimeout`) +
+            FfiConverterString.allocationSize(value.`serverName`) +
+            FfiConverterString.allocationSize(value.`localIp`) +
+            FfiConverterBoolean.allocationSize(value.`ipv6`) +
+            FfiConverterBoolean.allocationSize(value.`iceLite`) +
+            FfiConverterBoolean.allocationSize(value.`iceTcp`) +
+            FfiConverterString.allocationSize(value.`iceNomination`) +
+            FfiConverterBoolean.allocationSize(value.`iceKeepaliveConncheck`) +
+            FfiConverterBoolean.allocationSize(value.`fullTrickle`) +
+            FfiConverterBoolean.allocationSize(value.`mdnsEnabled`) +
+            FfiConverterULong.allocationSize(value.`minNackQueue`) +
+            FfiConverterULong.allocationSize(value.`twccPeriod`) +
+            FfiConverterULong.allocationSize(value.`dtlsMtu`) +
+            FfiConverterULong.allocationSize(value.`staticEventLoops`) +
+            FfiConverterBoolean.allocationSize(value.`apiSecret`) +
+            FfiConverterBoolean.allocationSize(value.`authToken`) +
+            FfiConverterBoolean.allocationSize(value.`eventHandlers`) +
+            FfiConverterBoolean.allocationSize(value.`opaqueidInApi`) +
+            FfiConverterMapStringString.allocationSize(value.`dependencies`) +
+            FfiConverterMapStringTypeMetaData.allocationSize(value.`transports`) +
+            FfiConverterMapStringTypeMetaData.allocationSize(value.`plugins`)
+    )
+
+    override fun write(value: ServerInfoRsp, buf: ByteBuffer) {
+            FfiConverterString.write(value.`name`, buf)
+            FfiConverterULong.write(value.`version`, buf)
+            FfiConverterString.write(value.`versionString`, buf)
+            FfiConverterString.write(value.`author`, buf)
+            FfiConverterString.write(value.`commitHash`, buf)
+            FfiConverterString.write(value.`compileTime`, buf)
+            FfiConverterBoolean.write(value.`logToStdout`, buf)
+            FfiConverterBoolean.write(value.`logToFile`, buf)
+            FfiConverterBoolean.write(value.`dataChannels`, buf)
+            FfiConverterBoolean.write(value.`acceptingNewSessions`, buf)
+            FfiConverterULong.write(value.`sessionTimeout`, buf)
+            FfiConverterULong.write(value.`reclaimSessionTimeout`, buf)
+            FfiConverterULong.write(value.`candidatesTimeout`, buf)
+            FfiConverterString.write(value.`serverName`, buf)
+            FfiConverterString.write(value.`localIp`, buf)
+            FfiConverterBoolean.write(value.`ipv6`, buf)
+            FfiConverterBoolean.write(value.`iceLite`, buf)
+            FfiConverterBoolean.write(value.`iceTcp`, buf)
+            FfiConverterString.write(value.`iceNomination`, buf)
+            FfiConverterBoolean.write(value.`iceKeepaliveConncheck`, buf)
+            FfiConverterBoolean.write(value.`fullTrickle`, buf)
+            FfiConverterBoolean.write(value.`mdnsEnabled`, buf)
+            FfiConverterULong.write(value.`minNackQueue`, buf)
+            FfiConverterULong.write(value.`twccPeriod`, buf)
+            FfiConverterULong.write(value.`dtlsMtu`, buf)
+            FfiConverterULong.write(value.`staticEventLoops`, buf)
+            FfiConverterBoolean.write(value.`apiSecret`, buf)
+            FfiConverterBoolean.write(value.`authToken`, buf)
+            FfiConverterBoolean.write(value.`eventHandlers`, buf)
+            FfiConverterBoolean.write(value.`opaqueidInApi`, buf)
+            FfiConverterMapStringString.write(value.`dependencies`, buf)
+            FfiConverterMapStringTypeMetaData.write(value.`transports`, buf)
+            FfiConverterMapStringTypeMetaData.write(value.`plugins`, buf)
+    }
+}
+
+
+
+data class U63 (
+    val `inner`: kotlin.ULong
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeU63: FfiConverterRustBuffer<U63> {
+    override fun read(buf: ByteBuffer): U63 {
+        return U63(
+            FfiConverterULong.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: U63) = (
+            FfiConverterULong.allocationSize(value.`inner`)
+    )
+
+    override fun write(value: U63, buf: ByteBuffer) {
+            FfiConverterULong.write(value.`inner`, buf)
+    }
+}
+
+
+
+
+enum class AudioBridgeCodec {
+    
+    OPUS,
+    /**
+     * A-Law
+     */
+    PCMA,
+    /**
+     * mu-Law
+     */
+    PCMU;
+    companion object
+}
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeCodec: FfiConverterRustBuffer<AudioBridgeCodec> {
+    override fun read(buf: ByteBuffer) = try {
+        AudioBridgeCodec.values()[buf.getInt() - 1]
+    } catch (e: IndexOutOfBoundsException) {
+        throw RuntimeException("invalid enum value, something is very wrong!!", e)
+    }
+
+    override fun allocationSize(value: AudioBridgeCodec) = 4UL
+
+    override fun write(value: AudioBridgeCodec, buf: ByteBuffer) {
+        buf.putInt(value.ordinal + 1)
+    }
+}
+
+
+
+
+
+
+enum class GenericEvent {
+    
+    DETACHED,
+    /**
+     * The PeerConnection was closed, either by Janus or by the user/application, and as such cannot be used anymore.
+     */
+    HANGUP,
+    /**
+     * Whether Janus is receiving (receiving: true/false) audio/video (type: "audio/video") on this PeerConnection.
+     */
+    MEDIA,
+    TIMEOUT,
+    /**
+     * ICE and DTLS succeeded, and so Janus correctly established a PeerConnection with the user/application.
+     */
+    WEBRTC_UP,
+    /**
+     * Whether Janus is reporting trouble sending/receiving (uplink: true/false) media on this PeerConnection.
+     */
+    SLOWLINK,
+    TRICKLE;
+    companion object
+}
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeGenericEvent: FfiConverterRustBuffer<GenericEvent> {
+    override fun read(buf: ByteBuffer) = try {
+        GenericEvent.values()[buf.getInt() - 1]
+    } catch (e: IndexOutOfBoundsException) {
+        throw RuntimeException("invalid enum value, something is very wrong!!", e)
+    }
+
+    override fun allocationSize(value: GenericEvent) = 4UL
+
+    override fun write(value: GenericEvent, buf: ByteBuffer) {
+        buf.putInt(value.ordinal + 1)
+    }
+}
+
+
 
 
 
@@ -2906,6 +5561,76 @@ public object FfiConverterTypeJanusGatewaySessionError : FfiConverterRustBuffer<
 
 
 
+sealed class JanusId {
+    
+    data class String(
+        val v1: kotlin.String) : JanusId() {
+        companion object
+    }
+    
+    data class Uint(
+        val v1: U63) : JanusId() {
+        companion object
+    }
+    
+
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeJanusId : FfiConverterRustBuffer<JanusId>{
+    override fun read(buf: ByteBuffer): JanusId {
+        return when(buf.getInt()) {
+            1 -> JanusId.String(
+                FfiConverterString.read(buf),
+                )
+            2 -> JanusId.Uint(
+                FfiConverterTypeU63.read(buf),
+                )
+            else -> throw RuntimeException("invalid enum value, something is very wrong!!")
+        }
+    }
+
+    override fun allocationSize(value: JanusId) = when(value) {
+        is JanusId.String -> {
+            // Add the size for the Int that specifies the variant plus the size needed for all fields
+            (
+                4UL
+                + FfiConverterString.allocationSize(value.v1)
+            )
+        }
+        is JanusId.Uint -> {
+            // Add the size for the Int that specifies the variant plus the size needed for all fields
+            (
+                4UL
+                + FfiConverterTypeU63.allocationSize(value.v1)
+            )
+        }
+    }
+
+    override fun write(value: JanusId, buf: ByteBuffer) {
+        when(value) {
+            is JanusId.String -> {
+                buf.putInt(1)
+                FfiConverterString.write(value.v1, buf)
+                Unit
+            }
+            is JanusId.Uint -> {
+                buf.putInt(2)
+                FfiConverterTypeU63.write(value.v1, buf)
+                Unit
+            }
+        }.let { /* this makes the `when` an expression, which ensures it is exhaustive */ }
+    }
+}
+
+
+
+
+
 
 enum class JsepType {
     
@@ -2938,13 +5663,27 @@ public object FfiConverterTypeJsepType: FfiConverterRustBuffer<JsepType> {
 
 
 
-public interface EchotestHandleCallback {
+public interface AudioBridgeHandleCallback {
     
-    fun `onResult`(`echotest`: kotlin.String, `result`: kotlin.String)
+    fun `onResult`(`transaction`: kotlin.String, `result`: kotlin.String)
     
-    fun `onResultWithJsep`(`echotest`: kotlin.String, `result`: kotlin.String, `jsep`: Jsep)
+    fun `onResultWithJsep`(`transaction`: kotlin.String, `result`: kotlin.String, `jsep`: Jsep)
     
-    fun `onEchoTestError`(`errorCode`: kotlin.UShort, `error`: kotlin.String)
+    fun `onRoomJoinedWithJsep`(`id`: JanusId, `room`: JanusId, `participants`: List<AudioBridgeParticipant>, `jsep`: Jsep)
+    
+    fun `onRoomJoined`(`id`: JanusId, `room`: JanusId, `participants`: List<AudioBridgeParticipant>)
+    
+    fun `onParticipantsJoined`(`room`: JanusId, `participants`: List<AudioBridgeParticipant>)
+    
+    fun `onParticipantsUpdated`(`room`: JanusId, `participants`: List<AudioBridgeParticipant>)
+    
+    fun `onParticipantLeft`(`room`: JanusId, `participantId`: JanusId)
+    
+    fun `onHandleEvent`(`event`: GenericEvent)
+    
+    fun `onAudioBridgeError`(`errorCode`: kotlin.UShort, `error`: kotlin.String)
+    
+    fun `onOther`(`data`: kotlin.ByteArray)
     
     companion object
 }
@@ -2981,6 +5720,196 @@ public abstract class FfiConverterCallbackInterface<CallbackInterface: Any>: Ffi
         buf.putLong(lower(value))
     }
 }
+
+// Put the implementation in an object so we don't pollute the top-level namespace
+internal object uniffiCallbackInterfaceAudioBridgeHandleCallback {
+    internal object `onResult`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod0 {
+        override fun callback(`uniffiHandle`: Long,`transaction`: RustBuffer.ByValue,`result`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeAudioBridgeHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onResult`(
+                    FfiConverterString.lift(`transaction`),
+                    FfiConverterString.lift(`result`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+    internal object `onResultWithJsep`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod1 {
+        override fun callback(`uniffiHandle`: Long,`transaction`: RustBuffer.ByValue,`result`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeAudioBridgeHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onResultWithJsep`(
+                    FfiConverterString.lift(`transaction`),
+                    FfiConverterString.lift(`result`),
+                    FfiConverterTypeJsep.lift(`jsep`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+    internal object `onRoomJoinedWithJsep`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod2 {
+        override fun callback(`uniffiHandle`: Long,`id`: RustBuffer.ByValue,`room`: RustBuffer.ByValue,`participants`: RustBuffer.ByValue,`jsep`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeAudioBridgeHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onRoomJoinedWithJsep`(
+                    FfiConverterTypeJanusId.lift(`id`),
+                    FfiConverterTypeJanusId.lift(`room`),
+                    FfiConverterSequenceTypeAudioBridgeParticipant.lift(`participants`),
+                    FfiConverterTypeJsep.lift(`jsep`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+    internal object `onRoomJoined`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod3 {
+        override fun callback(`uniffiHandle`: Long,`id`: RustBuffer.ByValue,`room`: RustBuffer.ByValue,`participants`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeAudioBridgeHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onRoomJoined`(
+                    FfiConverterTypeJanusId.lift(`id`),
+                    FfiConverterTypeJanusId.lift(`room`),
+                    FfiConverterSequenceTypeAudioBridgeParticipant.lift(`participants`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+    internal object `onParticipantsJoined`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod4 {
+        override fun callback(`uniffiHandle`: Long,`room`: RustBuffer.ByValue,`participants`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeAudioBridgeHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onParticipantsJoined`(
+                    FfiConverterTypeJanusId.lift(`room`),
+                    FfiConverterSequenceTypeAudioBridgeParticipant.lift(`participants`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+    internal object `onParticipantsUpdated`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod5 {
+        override fun callback(`uniffiHandle`: Long,`room`: RustBuffer.ByValue,`participants`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeAudioBridgeHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onParticipantsUpdated`(
+                    FfiConverterTypeJanusId.lift(`room`),
+                    FfiConverterSequenceTypeAudioBridgeParticipant.lift(`participants`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+    internal object `onParticipantLeft`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod6 {
+        override fun callback(`uniffiHandle`: Long,`room`: RustBuffer.ByValue,`participantId`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeAudioBridgeHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onParticipantLeft`(
+                    FfiConverterTypeJanusId.lift(`room`),
+                    FfiConverterTypeJanusId.lift(`participantId`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+    internal object `onHandleEvent`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod7 {
+        override fun callback(`uniffiHandle`: Long,`event`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeAudioBridgeHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onHandleEvent`(
+                    FfiConverterTypeGenericEvent.lift(`event`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+    internal object `onAudioBridgeError`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod8 {
+        override fun callback(`uniffiHandle`: Long,`errorCode`: Short,`error`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeAudioBridgeHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onAudioBridgeError`(
+                    FfiConverterUShort.lift(`errorCode`),
+                    FfiConverterString.lift(`error`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+    internal object `onOther`: UniffiCallbackInterfaceAudioBridgeHandleCallbackMethod9 {
+        override fun callback(`uniffiHandle`: Long,`data`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeAudioBridgeHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onOther`(
+                    FfiConverterByteArray.lift(`data`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+
+    internal object uniffiFree: UniffiCallbackInterfaceFree {
+        override fun callback(handle: Long) {
+            FfiConverterTypeAudioBridgeHandleCallback.handleMap.remove(handle)
+        }
+    }
+
+    internal var vtable = UniffiVTableCallbackInterfaceAudioBridgeHandleCallback.UniffiByValue(
+        `onResult`,
+        `onResultWithJsep`,
+        `onRoomJoinedWithJsep`,
+        `onRoomJoined`,
+        `onParticipantsJoined`,
+        `onParticipantsUpdated`,
+        `onParticipantLeft`,
+        `onHandleEvent`,
+        `onAudioBridgeError`,
+        `onOther`,
+        uniffiFree,
+    )
+
+    // Registers the foreign callback with the Rust side.
+    // This method is generated for each callback interface.
+    internal fun register(lib: UniffiLib) {
+        lib.uniffi_janus_gateway_fn_init_callback_vtable_audiobridgehandlecallback(vtable)
+    }
+}
+
+/**
+ * The ffiConverter which transforms the Callbacks in to handles to pass to Rust.
+ *
+ * @suppress
+ */
+public object FfiConverterTypeAudioBridgeHandleCallback: FfiConverterCallbackInterface<AudioBridgeHandleCallback>()
+
+
+
+
+
+public interface EchotestHandleCallback {
+    
+    fun `onResult`(`echotest`: kotlin.String, `result`: kotlin.String)
+    
+    fun `onResultWithJsep`(`echotest`: kotlin.String, `result`: kotlin.String, `jsep`: Jsep)
+    
+    fun `onEchoTestError`(`errorCode`: kotlin.UShort, `error`: kotlin.String)
+    
+    fun `onHandleEvent`(`event`: GenericEvent)
+    
+    fun `onOther`(`data`: kotlin.ByteArray)
+    
+    companion object
+}
+
+
 
 // Put the implementation in an object so we don't pollute the top-level namespace
 internal object uniffiCallbackInterfaceEchotestHandleCallback {
@@ -3024,6 +5953,30 @@ internal object uniffiCallbackInterfaceEchotestHandleCallback {
             uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
         }
     }
+    internal object `onHandleEvent`: UniffiCallbackInterfaceEchotestHandleCallbackMethod3 {
+        override fun callback(`uniffiHandle`: Long,`event`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeEchotestHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onHandleEvent`(
+                    FfiConverterTypeGenericEvent.lift(`event`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+    internal object `onOther`: UniffiCallbackInterfaceEchotestHandleCallbackMethod4 {
+        override fun callback(`uniffiHandle`: Long,`data`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeEchotestHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onOther`(
+                    FfiConverterByteArray.lift(`data`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
 
     internal object uniffiFree: UniffiCallbackInterfaceFree {
         override fun callback(handle: Long) {
@@ -3035,6 +5988,8 @@ internal object uniffiCallbackInterfaceEchotestHandleCallback {
         `onResult`,
         `onResultWithJsep`,
         `onEchoTestError`,
+        `onHandleEvent`,
+        `onOther`,
         uniffiFree,
     )
 
@@ -3058,7 +6013,9 @@ public object FfiConverterTypeEchotestHandleCallback: FfiConverterCallbackInterf
 
 public interface HandleCallback {
     
-    fun `onEvent`(`event`: kotlin.String)
+    fun `onPluginEvent`(`event`: kotlin.ByteArray)
+    
+    fun `onHandleEvent`(`event`: GenericEvent)
     
     companion object
 }
@@ -3067,12 +6024,24 @@ public interface HandleCallback {
 
 // Put the implementation in an object so we don't pollute the top-level namespace
 internal object uniffiCallbackInterfaceHandleCallback {
-    internal object `onEvent`: UniffiCallbackInterfaceHandleCallbackMethod0 {
+    internal object `onPluginEvent`: UniffiCallbackInterfaceHandleCallbackMethod0 {
         override fun callback(`uniffiHandle`: Long,`event`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
             val uniffiObj = FfiConverterTypeHandleCallback.handleMap.get(uniffiHandle)
             val makeCall = { ->
-                uniffiObj.`onEvent`(
-                    FfiConverterString.lift(`event`),
+                uniffiObj.`onPluginEvent`(
+                    FfiConverterByteArray.lift(`event`),
+                )
+            }
+            val writeReturn = { _: Unit -> Unit }
+            uniffiTraitInterfaceCall(uniffiCallStatus, makeCall, writeReturn)
+        }
+    }
+    internal object `onHandleEvent`: UniffiCallbackInterfaceHandleCallbackMethod1 {
+        override fun callback(`uniffiHandle`: Long,`event`: RustBuffer.ByValue,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+            val uniffiObj = FfiConverterTypeHandleCallback.handleMap.get(uniffiHandle)
+            val makeCall = { ->
+                uniffiObj.`onHandleEvent`(
+                    FfiConverterTypeGenericEvent.lift(`event`),
                 )
             }
             val writeReturn = { _: Unit -> Unit }
@@ -3087,7 +6056,8 @@ internal object uniffiCallbackInterfaceHandleCallback {
     }
 
     internal var vtable = UniffiVTableCallbackInterfaceHandleCallback.UniffiByValue(
-        `onEvent`,
+        `onPluginEvent`,
+        `onHandleEvent`,
         uniffiFree,
     )
 
@@ -3104,6 +6074,38 @@ internal object uniffiCallbackInterfaceHandleCallback {
  * @suppress
  */
 public object FfiConverterTypeHandleCallback: FfiConverterCallbackInterface<HandleCallback>()
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterOptionalUByte: FfiConverterRustBuffer<kotlin.UByte?> {
+    override fun read(buf: ByteBuffer): kotlin.UByte? {
+        if (buf.get().toInt() == 0) {
+            return null
+        }
+        return FfiConverterUByte.read(buf)
+    }
+
+    override fun allocationSize(value: kotlin.UByte?): ULong {
+        if (value == null) {
+            return 1UL
+        } else {
+            return 1UL + FfiConverterUByte.allocationSize(value)
+        }
+    }
+
+    override fun write(value: kotlin.UByte?, buf: ByteBuffer) {
+        if (value == null) {
+            buf.put(0)
+        } else {
+            buf.put(1)
+            FfiConverterUByte.write(value, buf)
+        }
+    }
+}
 
 
 
@@ -3133,6 +6135,70 @@ public object FfiConverterOptionalUInt: FfiConverterRustBuffer<kotlin.UInt?> {
         } else {
             buf.put(1)
             FfiConverterUInt.write(value, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterOptionalInt: FfiConverterRustBuffer<kotlin.Int?> {
+    override fun read(buf: ByteBuffer): kotlin.Int? {
+        if (buf.get().toInt() == 0) {
+            return null
+        }
+        return FfiConverterInt.read(buf)
+    }
+
+    override fun allocationSize(value: kotlin.Int?): ULong {
+        if (value == null) {
+            return 1UL
+        } else {
+            return 1UL + FfiConverterInt.allocationSize(value)
+        }
+    }
+
+    override fun write(value: kotlin.Int?, buf: ByteBuffer) {
+        if (value == null) {
+            buf.put(0)
+        } else {
+            buf.put(1)
+            FfiConverterInt.write(value, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterOptionalULong: FfiConverterRustBuffer<kotlin.ULong?> {
+    override fun read(buf: ByteBuffer): kotlin.ULong? {
+        if (buf.get().toInt() == 0) {
+            return null
+        }
+        return FfiConverterULong.read(buf)
+    }
+
+    override fun allocationSize(value: kotlin.ULong?): ULong {
+        if (value == null) {
+            return 1UL
+        } else {
+            return 1UL + FfiConverterULong.allocationSize(value)
+        }
+    }
+
+    override fun write(value: kotlin.ULong?, buf: ByteBuffer) {
+        if (value == null) {
+            buf.put(0)
+        } else {
+            buf.put(1)
+            FfiConverterULong.write(value, buf)
         }
     }
 }
@@ -3204,23 +6270,345 @@ public object FfiConverterOptionalString: FfiConverterRustBuffer<kotlin.String?>
 
 
 
+/**
+ * @suppress
+ */
+public object FfiConverterOptionalTypeAudioBridgeRTP: FfiConverterRustBuffer<AudioBridgeRtp?> {
+    override fun read(buf: ByteBuffer): AudioBridgeRtp? {
+        if (buf.get().toInt() == 0) {
+            return null
+        }
+        return FfiConverterTypeAudioBridgeRTP.read(buf)
+    }
+
+    override fun allocationSize(value: AudioBridgeRtp?): ULong {
+        if (value == null) {
+            return 1UL
+        } else {
+            return 1UL + FfiConverterTypeAudioBridgeRTP.allocationSize(value)
+        }
+    }
+
+    override fun write(value: AudioBridgeRtp?, buf: ByteBuffer) {
+        if (value == null) {
+            buf.put(0)
+        } else {
+            buf.put(1)
+            FfiConverterTypeAudioBridgeRTP.write(value, buf)
+        }
+    }
+}
 
 
 
- fun `rawInitLogger`()
+
+/**
+ * @suppress
+ */
+public object FfiConverterOptionalTypeJsep: FfiConverterRustBuffer<Jsep?> {
+    override fun read(buf: ByteBuffer): Jsep? {
+        if (buf.get().toInt() == 0) {
+            return null
+        }
+        return FfiConverterTypeJsep.read(buf)
+    }
+
+    override fun allocationSize(value: Jsep?): ULong {
+        if (value == null) {
+            return 1UL
+        } else {
+            return 1UL + FfiConverterTypeJsep.allocationSize(value)
+        }
+    }
+
+    override fun write(value: Jsep?, buf: ByteBuffer) {
+        if (value == null) {
+            buf.put(0)
+        } else {
+            buf.put(1)
+            FfiConverterTypeJsep.write(value, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterOptionalTypeAudioBridgeCodec: FfiConverterRustBuffer<AudioBridgeCodec?> {
+    override fun read(buf: ByteBuffer): AudioBridgeCodec? {
+        if (buf.get().toInt() == 0) {
+            return null
+        }
+        return FfiConverterTypeAudioBridgeCodec.read(buf)
+    }
+
+    override fun allocationSize(value: AudioBridgeCodec?): ULong {
+        if (value == null) {
+            return 1UL
+        } else {
+            return 1UL + FfiConverterTypeAudioBridgeCodec.allocationSize(value)
+        }
+    }
+
+    override fun write(value: AudioBridgeCodec?, buf: ByteBuffer) {
+        if (value == null) {
+            buf.put(0)
+        } else {
+            buf.put(1)
+            FfiConverterTypeAudioBridgeCodec.write(value, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterOptionalTypeJanusId: FfiConverterRustBuffer<JanusId?> {
+    override fun read(buf: ByteBuffer): JanusId? {
+        if (buf.get().toInt() == 0) {
+            return null
+        }
+        return FfiConverterTypeJanusId.read(buf)
+    }
+
+    override fun allocationSize(value: JanusId?): ULong {
+        if (value == null) {
+            return 1UL
+        } else {
+            return 1UL + FfiConverterTypeJanusId.allocationSize(value)
+        }
+    }
+
+    override fun write(value: JanusId?, buf: ByteBuffer) {
+        if (value == null) {
+            buf.put(0)
+        } else {
+            buf.put(1)
+            FfiConverterTypeJanusId.write(value, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterOptionalSequenceString: FfiConverterRustBuffer<List<kotlin.String>?> {
+    override fun read(buf: ByteBuffer): List<kotlin.String>? {
+        if (buf.get().toInt() == 0) {
+            return null
+        }
+        return FfiConverterSequenceString.read(buf)
+    }
+
+    override fun allocationSize(value: List<kotlin.String>?): ULong {
+        if (value == null) {
+            return 1UL
+        } else {
+            return 1UL + FfiConverterSequenceString.allocationSize(value)
+        }
+    }
+
+    override fun write(value: List<kotlin.String>?, buf: ByteBuffer) {
+        if (value == null) {
+            buf.put(0)
+        } else {
+            buf.put(1)
+            FfiConverterSequenceString.write(value, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterSequenceString: FfiConverterRustBuffer<List<kotlin.String>> {
+    override fun read(buf: ByteBuffer): List<kotlin.String> {
+        val len = buf.getInt()
+        return List<kotlin.String>(len) {
+            FfiConverterString.read(buf)
+        }
+    }
+
+    override fun allocationSize(value: List<kotlin.String>): ULong {
+        val sizeForLength = 4UL
+        val sizeForItems = value.map { FfiConverterString.allocationSize(it) }.sum()
+        return sizeForLength + sizeForItems
+    }
+
+    override fun write(value: List<kotlin.String>, buf: ByteBuffer) {
+        buf.putInt(value.size)
+        value.iterator().forEach {
+            FfiConverterString.write(it, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterSequenceTypeAudioBridgeParticipant: FfiConverterRustBuffer<List<AudioBridgeParticipant>> {
+    override fun read(buf: ByteBuffer): List<AudioBridgeParticipant> {
+        val len = buf.getInt()
+        return List<AudioBridgeParticipant>(len) {
+            FfiConverterTypeAudioBridgeParticipant.read(buf)
+        }
+    }
+
+    override fun allocationSize(value: List<AudioBridgeParticipant>): ULong {
+        val sizeForLength = 4UL
+        val sizeForItems = value.map { FfiConverterTypeAudioBridgeParticipant.allocationSize(it) }.sum()
+        return sizeForLength + sizeForItems
+    }
+
+    override fun write(value: List<AudioBridgeParticipant>, buf: ByteBuffer) {
+        buf.putInt(value.size)
+        value.iterator().forEach {
+            FfiConverterTypeAudioBridgeParticipant.write(it, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterSequenceTypeCandidate: FfiConverterRustBuffer<List<Candidate>> {
+    override fun read(buf: ByteBuffer): List<Candidate> {
+        val len = buf.getInt()
+        return List<Candidate>(len) {
+            FfiConverterTypeCandidate.read(buf)
+        }
+    }
+
+    override fun allocationSize(value: List<Candidate>): ULong {
+        val sizeForLength = 4UL
+        val sizeForItems = value.map { FfiConverterTypeCandidate.allocationSize(it) }.sum()
+        return sizeForLength + sizeForItems
+    }
+
+    override fun write(value: List<Candidate>, buf: ByteBuffer) {
+        buf.putInt(value.size)
+        value.iterator().forEach {
+            FfiConverterTypeCandidate.write(it, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterMapStringString: FfiConverterRustBuffer<Map<kotlin.String, kotlin.String>> {
+    override fun read(buf: ByteBuffer): Map<kotlin.String, kotlin.String> {
+        val len = buf.getInt()
+        return buildMap<kotlin.String, kotlin.String>(len) {
+            repeat(len) {
+                val k = FfiConverterString.read(buf)
+                val v = FfiConverterString.read(buf)
+                this[k] = v
+            }
+        }
+    }
+
+    override fun allocationSize(value: Map<kotlin.String, kotlin.String>): ULong {
+        val spaceForMapSize = 4UL
+        val spaceForChildren = value.map { (k, v) ->
+            FfiConverterString.allocationSize(k) +
+            FfiConverterString.allocationSize(v)
+        }.sum()
+        return spaceForMapSize + spaceForChildren
+    }
+
+    override fun write(value: Map<kotlin.String, kotlin.String>, buf: ByteBuffer) {
+        buf.putInt(value.size)
+        // The parens on `(k, v)` here ensure we're calling the right method,
+        // which is important for compatibility with older android devices.
+        // Ref https://blog.danlew.net/2017/03/16/kotlin-puzzler-whose-line-is-it-anyways/
+        value.forEach { (k, v) ->
+            FfiConverterString.write(k, buf)
+            FfiConverterString.write(v, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterMapStringTypeMetaData: FfiConverterRustBuffer<Map<kotlin.String, MetaData>> {
+    override fun read(buf: ByteBuffer): Map<kotlin.String, MetaData> {
+        val len = buf.getInt()
+        return buildMap<kotlin.String, MetaData>(len) {
+            repeat(len) {
+                val k = FfiConverterString.read(buf)
+                val v = FfiConverterTypeMetaData.read(buf)
+                this[k] = v
+            }
+        }
+    }
+
+    override fun allocationSize(value: Map<kotlin.String, MetaData>): ULong {
+        val spaceForMapSize = 4UL
+        val spaceForChildren = value.map { (k, v) ->
+            FfiConverterString.allocationSize(k) +
+            FfiConverterTypeMetaData.allocationSize(v)
+        }.sum()
+        return spaceForMapSize + spaceForChildren
+    }
+
+    override fun write(value: Map<kotlin.String, MetaData>, buf: ByteBuffer) {
+        buf.putInt(value.size)
+        // The parens on `(k, v)` here ensure we're calling the right method,
+        // which is important for compatibility with older android devices.
+        // Ref https://blog.danlew.net/2017/03/16/kotlin-puzzler-whose-line-is-it-anyways/
+        value.forEach { (k, v) ->
+            FfiConverterString.write(k, buf)
+            FfiConverterTypeMetaData.write(v, buf)
+        }
+    }
+}
+
+
+
+
+
+
+
+ fun `initJanusLogger`(`subsystem`: kotlin.String, `category`: kotlin.String)
         = 
     uniffiRustCall() { _status ->
-    UniffiLib.INSTANCE.uniffi_janus_gateway_fn_func_raw_init_logger(
-        _status)
+    UniffiLib.INSTANCE.uniffi_janus_gateway_fn_func_init_janus_logger(
+        FfiConverterString.lower(`subsystem`),FfiConverterString.lower(`category`),_status)
 }
     
     
 
     @Throws(JanusGatewayConnectionException::class)
     @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
-     suspend fun `rawJanusConnect`(`config`: Config) : Connection {
+     suspend fun `janusConnect`(`config`: Config) : Connection {
         return uniffiRustCallAsync(
-        UniffiLib.INSTANCE.uniffi_janus_gateway_fn_func_raw_janus_connect(FfiConverterTypeConfig.lower(`config`),),
+        UniffiLib.INSTANCE.uniffi_janus_gateway_fn_func_janus_connect(FfiConverterTypeConfig.lower(`config`),),
         { future, callback, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_poll_pointer(future, callback, continuation) },
         { future, continuation -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_complete_pointer(future, continuation) },
         { future -> UniffiLib.INSTANCE.ffi_janus_gateway_rust_future_free_pointer(future) },
