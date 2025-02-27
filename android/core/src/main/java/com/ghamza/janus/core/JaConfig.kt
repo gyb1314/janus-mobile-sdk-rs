@@ -6,5 +6,5 @@ data class JaConfig(
     val url: String, val capacity: UShort, val namespace: String?, val apisecret: String?
 ) {
     val lower: Config
-        get() = Config(url, capacity, namespace, apisecret)
+        get() = Config(url, capacity, namespace ?: "", apisecret ?: "")
 }

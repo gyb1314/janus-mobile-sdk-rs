@@ -1,11 +1,11 @@
 package com.ghamza.janus.core
 
-import com.ghamza.janus.bindings.rawInitLogger
+import com.ghamza.janus.bindings.initJanusLogger
 
 class JanusLogger {
     companion object {
-        fun initialize() {
-            rawInitLogger()
+        fun initialize(subsystem: String = "janus", category: String = "gateway") {
+            initJanusLogger(subsystem, category)
         }
     }
 }

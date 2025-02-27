@@ -3,6 +3,7 @@ package com.ghamza.janus.core
 import com.ghamza.janus.bindings.Handle
 import com.ghamza.janus.bindings.HandleCallback
 import com.ghamza.janus.bindings.Jsep
+import com.ghamza.janus.bindings.GenericEvent
 import kotlinx.coroutines.channels.ProducerScope
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
@@ -18,22 +19,27 @@ class JaHandle(val handle: Handle): HandleCallback {
     }
 
     suspend fun fireAndForget(msg: String) {
-        handle.fireAndForget(msg)
+        handle.fireAndForget(msg.toByteArray())
     }
 
     suspend fun fireAndForget(msg: String, jsep: Jsep) {
-        handle.fireAndForgetWithJsep(msg, jsep)
+        handle.fireAndForgetWithJsep(msg.toByteArray(), jsep)
     }
 
     suspend fun sendWaitOnAck(msg: String, timeout: Duration) {
-        handle.sendWaitonAck(msg, timeout)
+        handle.sendWaitonAck(msg.toByteArray(), timeout)
     }
 
     suspend fun sendWaitOnResult(msg: String, timeout: Duration): String {
-        return handle.sendWaitonResult(msg, timeout)
+        val bytes = handle.sendWaitonResult(msg.toByteArray(), timeout)
+        return String(bytes)
     }
 
-    override fun onEvent(event: String) {
-        events?.trySend(event)
+    override fun onPluginEvent(event: ByteArray) {
+        events?.trySend(String(event))
+    }
+    
+    override fun onHandleEvent(event: GenericEvent) {
+        
     }
 }
