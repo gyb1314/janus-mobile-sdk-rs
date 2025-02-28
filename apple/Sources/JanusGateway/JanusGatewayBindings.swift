@@ -599,7 +599,7 @@ public protocol AudioBridgeHandleProtocol: AnyObject {
     
     func createRoom(params: AudioBridgeCreateParams, timeout: TimeInterval) async throws  -> AudioBridgeRoomCreatedRsp
     
-    func detach(timeout: TimeInterval) async throws 
+    func detach() async throws 
     
     func exist(roomId: JanusId, timeout: TimeInterval) async throws  -> Bool
     
@@ -607,7 +607,7 @@ public protocol AudioBridgeHandleProtocol: AnyObject {
     
     func fireAndForgetWithJsep(data: Data, jsep: Jsep) async throws 
     
-    func hangup(timeout: TimeInterval) async throws 
+    func hangup() async throws 
     
     func joinRoom(params: AudioBridgeJoinParams, jsep: Jsep?, timeout: TimeInterval) async throws  -> String
     
@@ -615,7 +615,7 @@ public protocol AudioBridgeHandleProtocol: AnyObject {
     
     func mute(params: AudioBridgeMuteParams) async throws  -> String
     
-    func sendWaitonAck(data: Data, timeout: TimeInterval) async throws 
+    func sendWaitonAck(data: Data, timeout: TimeInterval) async throws  -> String
     
     func sendWaitonResult(data: Data, timeout: TimeInterval) async throws  -> Data
     
@@ -728,13 +728,13 @@ open func createRoom(params: AudioBridgeCreateParams, timeout: TimeInterval)asyn
         )
 }
     
-open func detach(timeout: TimeInterval)async throws   {
+open func detach()async throws   {
     return
         try  await uniffiRustCallAsync(
             rustFutureFunc: {
                 uniffi_janus_gateway_fn_method_audiobridgehandle_detach(
-                    self.uniffiClonePointer(),
-                    FfiConverterDuration.lower(timeout)
+                    self.uniffiClonePointer()
+                    
                 )
             },
             pollFunc: ffi_janus_gateway_rust_future_poll_void,
@@ -796,13 +796,13 @@ open func fireAndForgetWithJsep(data: Data, jsep: Jsep)async throws   {
         )
 }
     
-open func hangup(timeout: TimeInterval)async throws   {
+open func hangup()async throws   {
     return
         try  await uniffiRustCallAsync(
             rustFutureFunc: {
                 uniffi_janus_gateway_fn_method_audiobridgehandle_hangup(
-                    self.uniffiClonePointer(),
-                    FfiConverterDuration.lower(timeout)
+                    self.uniffiClonePointer()
+                    
                 )
             },
             pollFunc: ffi_janus_gateway_rust_future_poll_void,
@@ -864,7 +864,7 @@ open func mute(params: AudioBridgeMuteParams)async throws  -> String  {
         )
 }
     
-open func sendWaitonAck(data: Data, timeout: TimeInterval)async throws   {
+open func sendWaitonAck(data: Data, timeout: TimeInterval)async throws  -> String  {
     return
         try  await uniffiRustCallAsync(
             rustFutureFunc: {
@@ -873,10 +873,10 @@ open func sendWaitonAck(data: Data, timeout: TimeInterval)async throws   {
                     FfiConverterData.lower(data),FfiConverterDuration.lower(timeout)
                 )
             },
-            pollFunc: ffi_janus_gateway_rust_future_poll_void,
-            completeFunc: ffi_janus_gateway_rust_future_complete_void,
-            freeFunc: ffi_janus_gateway_rust_future_free_void,
-            liftFunc: { $0 },
+            pollFunc: ffi_janus_gateway_rust_future_poll_rust_buffer,
+            completeFunc: ffi_janus_gateway_rust_future_complete_rust_buffer,
+            freeFunc: ffi_janus_gateway_rust_future_free_rust_buffer,
+            liftFunc: FfiConverterString.lift,
             errorHandler: FfiConverterTypeJanusGatewayCommunicationError.lift
         )
 }
@@ -1177,15 +1177,15 @@ public protocol EchotestHandleProtocol: AnyObject {
     
     func completeTrickle(timeout: TimeInterval) async throws 
     
-    func detach(timeout: TimeInterval) async throws 
+    func detach() async throws 
     
     func fireAndForget(data: Data) async throws 
     
     func fireAndForgetWithJsep(data: Data, jsep: Jsep) async throws 
     
-    func hangup(timeout: TimeInterval) async throws 
+    func hangup() async throws 
     
-    func sendWaitonAck(data: Data, timeout: TimeInterval) async throws 
+    func sendWaitonAck(data: Data, timeout: TimeInterval) async throws  -> String
     
     func sendWaitonResult(data: Data, timeout: TimeInterval) async throws  -> Data
     
@@ -1266,13 +1266,13 @@ open func completeTrickle(timeout: TimeInterval)async throws   {
         )
 }
     
-open func detach(timeout: TimeInterval)async throws   {
+open func detach()async throws   {
     return
         try  await uniffiRustCallAsync(
             rustFutureFunc: {
                 uniffi_janus_gateway_fn_method_echotesthandle_detach(
-                    self.uniffiClonePointer(),
-                    FfiConverterDuration.lower(timeout)
+                    self.uniffiClonePointer()
+                    
                 )
             },
             pollFunc: ffi_janus_gateway_rust_future_poll_void,
@@ -1317,13 +1317,13 @@ open func fireAndForgetWithJsep(data: Data, jsep: Jsep)async throws   {
         )
 }
     
-open func hangup(timeout: TimeInterval)async throws   {
+open func hangup()async throws   {
     return
         try  await uniffiRustCallAsync(
             rustFutureFunc: {
                 uniffi_janus_gateway_fn_method_echotesthandle_hangup(
-                    self.uniffiClonePointer(),
-                    FfiConverterDuration.lower(timeout)
+                    self.uniffiClonePointer()
+                    
                 )
             },
             pollFunc: ffi_janus_gateway_rust_future_poll_void,
@@ -1334,7 +1334,7 @@ open func hangup(timeout: TimeInterval)async throws   {
         )
 }
     
-open func sendWaitonAck(data: Data, timeout: TimeInterval)async throws   {
+open func sendWaitonAck(data: Data, timeout: TimeInterval)async throws  -> String  {
     return
         try  await uniffiRustCallAsync(
             rustFutureFunc: {
@@ -1343,10 +1343,10 @@ open func sendWaitonAck(data: Data, timeout: TimeInterval)async throws   {
                     FfiConverterData.lower(data),FfiConverterDuration.lower(timeout)
                 )
             },
-            pollFunc: ffi_janus_gateway_rust_future_poll_void,
-            completeFunc: ffi_janus_gateway_rust_future_complete_void,
-            freeFunc: ffi_janus_gateway_rust_future_free_void,
-            liftFunc: { $0 },
+            pollFunc: ffi_janus_gateway_rust_future_poll_rust_buffer,
+            completeFunc: ffi_janus_gateway_rust_future_complete_rust_buffer,
+            freeFunc: ffi_janus_gateway_rust_future_free_rust_buffer,
+            liftFunc: FfiConverterString.lift,
             errorHandler: FfiConverterTypeJanusGatewayCommunicationError.lift
         )
 }
@@ -1516,15 +1516,15 @@ public protocol HandleProtocol: AnyObject {
     
     func completeTrickle(timeout: TimeInterval) async throws 
     
-    func detach(timeout: TimeInterval) async throws 
+    func detach() async throws 
     
     func fireAndForget(data: Data) async throws 
     
     func fireAndForgetWithJsep(data: Data, jsep: Jsep) async throws 
     
-    func hangup(timeout: TimeInterval) async throws 
+    func hangup() async throws 
     
-    func sendWaitonAck(data: Data, timeout: TimeInterval) async throws 
+    func sendWaitonAck(data: Data, timeout: TimeInterval) async throws  -> String
     
     func sendWaitonResult(data: Data, timeout: TimeInterval) async throws  -> Data
     
@@ -1601,13 +1601,13 @@ open func completeTrickle(timeout: TimeInterval)async throws   {
         )
 }
     
-open func detach(timeout: TimeInterval)async throws   {
+open func detach()async throws   {
     return
         try  await uniffiRustCallAsync(
             rustFutureFunc: {
                 uniffi_janus_gateway_fn_method_handle_detach(
-                    self.uniffiClonePointer(),
-                    FfiConverterDuration.lower(timeout)
+                    self.uniffiClonePointer()
+                    
                 )
             },
             pollFunc: ffi_janus_gateway_rust_future_poll_void,
@@ -1652,13 +1652,13 @@ open func fireAndForgetWithJsep(data: Data, jsep: Jsep)async throws   {
         )
 }
     
-open func hangup(timeout: TimeInterval)async throws   {
+open func hangup()async throws   {
     return
         try  await uniffiRustCallAsync(
             rustFutureFunc: {
                 uniffi_janus_gateway_fn_method_handle_hangup(
-                    self.uniffiClonePointer(),
-                    FfiConverterDuration.lower(timeout)
+                    self.uniffiClonePointer()
+                    
                 )
             },
             pollFunc: ffi_janus_gateway_rust_future_poll_void,
@@ -1669,7 +1669,7 @@ open func hangup(timeout: TimeInterval)async throws   {
         )
 }
     
-open func sendWaitonAck(data: Data, timeout: TimeInterval)async throws   {
+open func sendWaitonAck(data: Data, timeout: TimeInterval)async throws  -> String  {
     return
         try  await uniffiRustCallAsync(
             rustFutureFunc: {
@@ -1678,10 +1678,10 @@ open func sendWaitonAck(data: Data, timeout: TimeInterval)async throws   {
                     FfiConverterData.lower(data),FfiConverterDuration.lower(timeout)
                 )
             },
-            pollFunc: ffi_janus_gateway_rust_future_poll_void,
-            completeFunc: ffi_janus_gateway_rust_future_complete_void,
-            freeFunc: ffi_janus_gateway_rust_future_free_void,
-            liftFunc: { $0 },
+            pollFunc: ffi_janus_gateway_rust_future_poll_rust_buffer,
+            completeFunc: ffi_janus_gateway_rust_future_complete_rust_buffer,
+            freeFunc: ffi_janus_gateway_rust_future_free_rust_buffer,
+            liftFunc: FfiConverterString.lift,
             errorHandler: FfiConverterTypeJanusGatewayCommunicationError.lift
         )
 }
@@ -5998,7 +5998,7 @@ private let initializationResult: InitializationResult = {
     if (uniffi_janus_gateway_checksum_method_audiobridgehandle_create_room() != 56852) {
         return InitializationResult.apiChecksumMismatch
     }
-    if (uniffi_janus_gateway_checksum_method_audiobridgehandle_detach() != 50253) {
+    if (uniffi_janus_gateway_checksum_method_audiobridgehandle_detach() != 13604) {
         return InitializationResult.apiChecksumMismatch
     }
     if (uniffi_janus_gateway_checksum_method_audiobridgehandle_exist() != 55415) {
@@ -6010,7 +6010,7 @@ private let initializationResult: InitializationResult = {
     if (uniffi_janus_gateway_checksum_method_audiobridgehandle_fire_and_forget_with_jsep() != 6039) {
         return InitializationResult.apiChecksumMismatch
     }
-    if (uniffi_janus_gateway_checksum_method_audiobridgehandle_hangup() != 1409) {
+    if (uniffi_janus_gateway_checksum_method_audiobridgehandle_hangup() != 62093) {
         return InitializationResult.apiChecksumMismatch
     }
     if (uniffi_janus_gateway_checksum_method_audiobridgehandle_join_room() != 62884) {
@@ -6022,7 +6022,7 @@ private let initializationResult: InitializationResult = {
     if (uniffi_janus_gateway_checksum_method_audiobridgehandle_mute() != 55698) {
         return InitializationResult.apiChecksumMismatch
     }
-    if (uniffi_janus_gateway_checksum_method_audiobridgehandle_send_waiton_ack() != 44496) {
+    if (uniffi_janus_gateway_checksum_method_audiobridgehandle_send_waiton_ack() != 34307) {
         return InitializationResult.apiChecksumMismatch
     }
     if (uniffi_janus_gateway_checksum_method_audiobridgehandle_send_waiton_result() != 47125) {
@@ -6049,7 +6049,7 @@ private let initializationResult: InitializationResult = {
     if (uniffi_janus_gateway_checksum_method_echotesthandle_complete_trickle() != 25982) {
         return InitializationResult.apiChecksumMismatch
     }
-    if (uniffi_janus_gateway_checksum_method_echotesthandle_detach() != 23878) {
+    if (uniffi_janus_gateway_checksum_method_echotesthandle_detach() != 10964) {
         return InitializationResult.apiChecksumMismatch
     }
     if (uniffi_janus_gateway_checksum_method_echotesthandle_fire_and_forget() != 6820) {
@@ -6058,10 +6058,10 @@ private let initializationResult: InitializationResult = {
     if (uniffi_janus_gateway_checksum_method_echotesthandle_fire_and_forget_with_jsep() != 31372) {
         return InitializationResult.apiChecksumMismatch
     }
-    if (uniffi_janus_gateway_checksum_method_echotesthandle_hangup() != 29523) {
+    if (uniffi_janus_gateway_checksum_method_echotesthandle_hangup() != 48274) {
         return InitializationResult.apiChecksumMismatch
     }
-    if (uniffi_janus_gateway_checksum_method_echotesthandle_send_waiton_ack() != 51386) {
+    if (uniffi_janus_gateway_checksum_method_echotesthandle_send_waiton_ack() != 9815) {
         return InitializationResult.apiChecksumMismatch
     }
     if (uniffi_janus_gateway_checksum_method_echotesthandle_send_waiton_result() != 15964) {
@@ -6085,7 +6085,7 @@ private let initializationResult: InitializationResult = {
     if (uniffi_janus_gateway_checksum_method_handle_complete_trickle() != 24960) {
         return InitializationResult.apiChecksumMismatch
     }
-    if (uniffi_janus_gateway_checksum_method_handle_detach() != 1157) {
+    if (uniffi_janus_gateway_checksum_method_handle_detach() != 49762) {
         return InitializationResult.apiChecksumMismatch
     }
     if (uniffi_janus_gateway_checksum_method_handle_fire_and_forget() != 43989) {
@@ -6094,10 +6094,10 @@ private let initializationResult: InitializationResult = {
     if (uniffi_janus_gateway_checksum_method_handle_fire_and_forget_with_jsep() != 28005) {
         return InitializationResult.apiChecksumMismatch
     }
-    if (uniffi_janus_gateway_checksum_method_handle_hangup() != 23669) {
+    if (uniffi_janus_gateway_checksum_method_handle_hangup() != 2958) {
         return InitializationResult.apiChecksumMismatch
     }
-    if (uniffi_janus_gateway_checksum_method_handle_send_waiton_ack() != 1198) {
+    if (uniffi_janus_gateway_checksum_method_handle_send_waiton_ack() != 21432) {
         return InitializationResult.apiChecksumMismatch
     }
     if (uniffi_janus_gateway_checksum_method_handle_send_waiton_result() != 24292) {
